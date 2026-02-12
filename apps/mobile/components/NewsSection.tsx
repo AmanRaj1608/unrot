@@ -1,14 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
-import { View, ScrollView, Text, ActivityIndicator, StyleSheet } from "react-native";
+import { View, ScrollView, Text, Pressable, ActivityIndicator, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
 import { api, type Article } from "../lib/api";
 import { ArticleCard } from "./ArticleCard";
 import { CategoryChip } from "./CategoryChip";
 
 const ALL_CATEGORIES = ["ai", "crypto", "devops", "founders"];
+const PREVIEW_COUNT = 3;
 
 export function NewsSection() {
+  const router = useRouter();
   const [articles, setArticles] = useState<Article[]>([]);
   const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
     new Set(["ai"])
@@ -52,6 +55,15 @@ export function NewsSection() {
       <View style={styles.sectionHeader}>
         <Ionicons name="newspaper-outline" size={22} color="#10B981" />
         <Text style={styles.heading}>News</Text>
+        {articles.length > PREVIEW_COUNT && (
+          <Pressable
+            onPress={() => router.push("/news")}
+            style={styles.seeAll}
+          >
+            <Text style={styles.seeAllText}>See all</Text>
+            <Ionicons name="chevron-forward" size={16} color="#10B981" />
+          </Pressable>
+        )}
       </View>
 
       <ScrollView
@@ -76,7 +88,7 @@ export function NewsSection() {
       ) : articles.length === 0 ? (
         <Text style={styles.empty}>No articles found</Text>
       ) : (
-        articles.map((article, i) => (
+        articles.slice(0, PREVIEW_COUNT).map((article, i) => (
           <ArticleCard
             key={`${article.url}-${i}`}
             article={article}
@@ -102,6 +114,17 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: "#111827",
     letterSpacing: -0.3,
+    flex: 1,
+  },
+  seeAll: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 2,
+  },
+  seeAllText: {
+    fontSize: 14,
+    color: "#10B981",
+    fontWeight: "600",
   },
   chipContent: { paddingHorizontal: 20, paddingBottom: 14 },
   loader: { paddingVertical: 24 },

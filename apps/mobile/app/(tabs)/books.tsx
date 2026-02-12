@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { api, type Book } from "../../lib/api";
 import { BookCard } from "../../components/BookCard";
@@ -26,7 +27,7 @@ export default function BooksScreen() {
       setError(null);
       const data = await api.books.list(category ?? undefined);
       setBooks(data);
-    } catch (err) {
+    } catch {
       setError("Failed to load books");
     } finally {
       setLoading(false);
@@ -46,10 +47,14 @@ export default function BooksScreen() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Ionicons name="book-outline" size={22} color="#10B981" />
+        <Text style={styles.headerTitle}>Books</Text>
+      </View>
+
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.chipRow}
         contentContainerStyle={styles.chipContent}
       >
         {categories.map((cat) => (
@@ -63,7 +68,7 @@ export default function BooksScreen() {
       </ScrollView>
 
       {loading ? (
-        <ActivityIndicator style={styles.center} size="large" color="#2563eb" />
+        <ActivityIndicator style={styles.center} size="large" color="#10B981" />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
       ) : (
@@ -84,10 +89,23 @@ export default function BooksScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8fafc" },
-  chipRow: { maxHeight: 52, borderBottomWidth: 1, borderBottomColor: "#e2e8f0" },
-  chipContent: { paddingHorizontal: 16, paddingVertical: 10, alignItems: "center" },
-  list: { paddingTop: 12, paddingBottom: 24 },
+  container: { flex: 1, backgroundColor: "#FAFAFA" },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    paddingBottom: 12,
+    gap: 8,
+  },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#111827",
+    letterSpacing: -0.3,
+  },
+  chipContent: { paddingHorizontal: 20, paddingBottom: 14 },
+  list: { paddingTop: 4, paddingBottom: 24 },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  error: { textAlign: "center", color: "#dc2626", marginTop: 40, fontSize: 15 },
+  error: { textAlign: "center", color: "#EF4444", marginTop: 40, fontSize: 15 },
 });

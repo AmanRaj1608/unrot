@@ -8,6 +8,7 @@ import {
   RefreshControl,
   StyleSheet,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import * as WebBrowser from "expo-web-browser";
 import { api, type Article } from "../../lib/api";
 import { ArticleCard } from "../../components/ArticleCard";
@@ -64,22 +65,16 @@ export default function NewsScreen() {
     loadNews(enabledCategories);
   };
 
-  const today = new Date().toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <View style={styles.container}>
-      <View style={styles.dateRow}>
-        <Text style={styles.date}>{today}</Text>
+      <View style={styles.header}>
+        <Ionicons name="newspaper-outline" size={22} color="#10B981" />
+        <Text style={styles.headerTitle}>News</Text>
       </View>
 
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.chipRow}
         contentContainerStyle={styles.chipContent}
       >
         {ALL_CATEGORIES.map((cat) => (
@@ -93,7 +88,7 @@ export default function NewsScreen() {
       </ScrollView>
 
       {loading ? (
-        <ActivityIndicator style={styles.center} size="large" color="#2563eb" />
+        <ActivityIndicator style={styles.center} size="large" color="#10B981" />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
       ) : (
@@ -107,7 +102,11 @@ export default function NewsScreen() {
             />
           )}
           refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={handleRefresh}
+              tintColor="#10B981"
+            />
           }
           contentContainerStyle={styles.list}
           ListEmptyComponent={
@@ -120,13 +119,24 @@ export default function NewsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8fafc" },
-  dateRow: { paddingHorizontal: 16, paddingTop: 12 },
-  date: { fontSize: 13, color: "#94a3b8", fontWeight: "500" },
-  chipRow: { maxHeight: 52, borderBottomWidth: 1, borderBottomColor: "#e2e8f0" },
-  chipContent: { paddingHorizontal: 16, paddingVertical: 10, alignItems: "center" },
-  list: { paddingTop: 12, paddingBottom: 24 },
+  container: { flex: 1, backgroundColor: "#FAFAFA" },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    paddingBottom: 12,
+    gap: 8,
+  },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#111827",
+    letterSpacing: -0.3,
+  },
+  chipContent: { paddingHorizontal: 20, paddingBottom: 14 },
+  list: { paddingTop: 4, paddingBottom: 24 },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  error: { textAlign: "center", color: "#dc2626", marginTop: 40, fontSize: 15 },
-  empty: { textAlign: "center", color: "#94a3b8", marginTop: 40, fontSize: 15 },
+  error: { textAlign: "center", color: "#EF4444", marginTop: 40, fontSize: 15 },
+  empty: { textAlign: "center", color: "#9CA3AF", marginTop: 40, fontSize: 15 },
 });
