@@ -14,22 +14,25 @@ import { api, type Article } from "../../lib/api";
 import { ArticleCard } from "../../components/ArticleCard";
 import { CategoryChip } from "../../components/CategoryChip";
 
-const ALL_CATEGORIES = ["ai", "crypto", "devops", "founders"];
-
 export default function NewsScreen() {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
   const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
-    new Set(["ai"])
+    new Set(["tech"])
   );
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    api.news.categories().then(setCategories).catch(() => {});
+  }, []);
+
   const loadNews = useCallback(
-    async (categories: Set<string>) => {
+    async (cats: Set<string>) => {
       try {
         setError(null);
-        const promises = Array.from(categories).map((cat) =>
+        const promises = Array.from(cats).map((cat) =>
           api.news.get(cat).catch(() => [] as Article[])
         );
         const results = await Promise.all(promises);
@@ -77,7 +80,7 @@ export default function NewsScreen() {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.chipContent}
       >
-        {ALL_CATEGORIES.map((cat) => (
+        {categories.map((cat) => (
           <CategoryChip
             key={cat}
             label={cat}
