@@ -43,7 +43,7 @@ export default function MathScreen() {
         <ActivityIndicator
           style={styles.center}
           size="large"
-          color="#2563eb"
+          color="#10B981"
         />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
@@ -82,9 +82,9 @@ export default function MathScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8fafc" },
+  container: { flex: 1, backgroundColor: "#FAFAFA" },
   refreshButton: {
-    backgroundColor: "#2563eb",
+    backgroundColor: "#10B981",
     marginHorizontal: 16,
     marginTop: 16,
     paddingVertical: 14,
@@ -96,13 +96,13 @@ const styles = StyleSheet.create({
   scrollContent: { padding: 20, paddingBottom: 40 },
   badge: {
     alignSelf: "flex-start",
-    backgroundColor: "#eff6ff",
+    backgroundColor: "#ECFDF5",
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
     marginBottom: 8,
   },
-  badgeText: { fontSize: 12, color: "#2563eb", fontWeight: "600" },
+  badgeText: { fontSize: 12, color: "#10B981", fontWeight: "600" },
   title: { fontSize: 22, fontWeight: "700", color: "#1e293b", marginBottom: 16 },
   speechRow: { alignItems: "flex-start", marginBottom: 16 },
   explanation: { fontSize: 15, lineHeight: 26, color: "#334155" },

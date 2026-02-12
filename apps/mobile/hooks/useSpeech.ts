@@ -7,11 +7,15 @@ export function useSpeech() {
   const speak = useCallback((text: string) => {
     Speech.stop();
     Speech.speak(text, {
+      language: "en-US",
       rate: 0.9,
       onStart: () => setIsSpeaking(true),
       onDone: () => setIsSpeaking(false),
       onStopped: () => setIsSpeaking(false),
-      onError: () => setIsSpeaking(false),
+      onError: (err) => {
+        console.error("Speech error:", err);
+        setIsSpeaking(false);
+      },
     });
   }, []);
 
