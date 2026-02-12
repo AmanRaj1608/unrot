@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sets-relations-functions",
+    "title": "Sets, Relations and Functions",
+    "category": "Algebra",
+    "explanation": "A set is a well-defined collection of distinct objects. Sets can be described in roster form {1, 2, 3} or set-builder form {x : x is a natural number, x < 4}.\n\nKey operations: Union (A ∪ B), Intersection (A ∩ B), Difference (A - B), Complement (A').\n\nDe Morgan's Laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.\n\nA Relation R from set A to set B is a subset of A × B. A relation on a set A can be reflexive (aRa for all a), symmetric (aRb implies bRa), transitive (aRb and bRc implies aRc), or an equivalence relation (all three).\n\nA Function f: A → B assigns each element of A exactly one element of B. Types: one-one (injective) if f(a₁) = f(a₂) implies a₁ = a₂, onto (surjective) if range = codomain, bijective if both. Composition: (g∘f)(x) = g(f(x)). Inverse f⁻¹ exists only for bijective functions."
+  },
+  {
+    "id": "complex-numbers",
+    "title": "Complex Numbers and Quadratic Equations",
+    "category": "Algebra",
+    "explanation": "A complex number z = a + bi where i = √(-1), i² = -1. The real part is Re(z) = a, imaginary part Im(z) = b.\n\nModulus: |z| = √(a² + b²). Conjugate: z̄ = a - bi. Properties: z·z̄ = |z|², |z₁z₂| = |z₁||z₂|.\n\nPolar form: z = r(cosθ + i sinθ) = re^(iθ) where r = |z| and θ = arg(z).\n\nDe Moivre's Theorem: (cosθ + i sinθ)ⁿ = cos(nθ) + i sin(nθ).\n\nQuadratic equation ax² + bx + c = 0 has roots x = (-b ± √(b² - 4ac)) / 2a. Discriminant D = b² - 4ac: D > 0 gives real distinct roots, D = 0 gives equal roots, D < 0 gives complex conjugate roots.\n\nVieta's formulas: sum of roots = -b/a, product of roots = c/a."
+  },
+  {
+    "id": "matrices-determinants",
+    "title": "Matrices and Determinants",
+    "category": "Algebra",
+    "explanation": "A matrix is a rectangular array of numbers arranged in rows and columns. An m×n matrix has m rows and n columns.\n\nMatrix operations: Addition (element-wise, same dimensions), Scalar multiplication, Matrix multiplication (AB exists when cols of A = rows of B, resulting dimensions are rows of A × cols of B).\n\nTranspose: (Aᵀ)ᵢⱼ = Aⱼᵢ. Properties: (AB)ᵀ = BᵀAᵀ.\n\nDeterminant (square matrices only): For 2×2: |a b; c d| = ad - bc. For 3×3: expand along any row/column using cofactors.\n\nProperties: det(AB) = det(A)·det(B), det(Aᵀ) = det(A), swapping rows changes sign, row of zeros means det = 0.\n\nInverse: A⁻¹ = adj(A)/det(A), exists only when det(A) ≠ 0. Cramer's Rule solves AX = B using determinants: xᵢ = det(Aᵢ)/det(A)."
+  },
+  {
+    "id": "permutations-combinations",
+    "title": "Permutations and Combinations",
+    "category": "Algebra",
+    "explanation": "Fundamental Counting Principle: if task 1 can be done in m ways and task 2 in n ways, both together can be done in m×n ways.\n\nPermutations (order matters): P(n,r) = n!/(n-r)!. Arranging r items from n distinct items.\n\nCombinations (order doesn't matter): C(n,r) = n!/(r!(n-r)!). Choosing r items from n distinct items.\n\nKey properties: C(n,r) = C(n,n-r), C(n,0) = C(n,n) = 1, C(n,r) + C(n,r+1) = C(n+1,r+1) (Pascal's identity).\n\nPermutations with repetition: n!/(p!q!r!...) for arranging n objects where p are alike, q are alike, etc.\n\nCircular permutations: (n-1)! ways to arrange n distinct objects in a circle.\n\nDerangements: number of permutations where no element is in its original position = n!(1 - 1/1! + 1/2! - 1/3! + ... + (-1)ⁿ/n!)."
+  },
+  {
+    "id": "binomial-theorem",
+    "title": "Binomial Theorem",
+    "category": "Algebra",
+    "explanation": "For any positive integer n: (a + b)ⁿ = Σ C(n,r) · aⁿ⁻ʳ · bʳ for r = 0 to n.\n\nGeneral term: T(r+1) = C(n,r) · aⁿ⁻ʳ · bʳ.\n\nMiddle term: if n is even, the middle term is T(n/2 + 1). If n is odd, there are two middle terms: T((n+1)/2) and T((n+3)/2).\n\nProperties of binomial coefficients: C(n,0) + C(n,1) + ... + C(n,n) = 2ⁿ. C(n,0) - C(n,1) + C(n,2) - ... = 0.\n\nBinomial series for rational index: (1 + x)ⁿ = 1 + nx + n(n-1)x²/2! + n(n-1)(n-2)x³/3! + ... valid for |x| < 1.\n\nMultinomial theorem: (x₁ + x₂ + ... + xₖ)ⁿ = Σ [n!/(n₁!n₂!...nₖ!)] x₁ⁿ¹x₂ⁿ²...xₖⁿᵏ where n₁+n₂+...+nₖ = n."
+  },
+  {
+    "id": "sequences-series",
+    "title": "Sequence and Series",
+    "category": "Algebra",
+    "explanation": "Arithmetic Progression (AP): a, a+d, a+2d, ... nth term: aₙ = a + (n-1)d. Sum of n terms: Sₙ = n/2 · [2a + (n-1)d] = n/2 · (first + last).\n\nGeometric Progression (GP): a, ar, ar², ... nth term: aₙ = arⁿ⁻¹. Sum of n terms: Sₙ = a(rⁿ - 1)/(r - 1) for r ≠ 1. Sum to infinity (|r| < 1): S∞ = a/(1 - r).\n\nHarmonic Progression (HP): reciprocals form an AP. 1/a, 1/(a+d), 1/(a+2d), ...\n\nRelation between means: AM ≥ GM ≥ HM, with equality when all numbers are equal. AM = (a+b)/2, GM = √(ab), HM = 2ab/(a+b). Also: AM × HM = GM².\n\nSpecial sums: Σk = n(n+1)/2, Σk² = n(n+1)(2n+1)/6, Σk³ = [n(n+1)/2]².\n\nMethod of differences: for series where differences form an AP or GP, find the general term from the difference pattern."
+  },
+  {
+    "id": "mathematical-induction",
+    "title": "Mathematical Induction",
+    "category": "Algebra",
+    "explanation": "The Principle of Mathematical Induction proves statements P(n) for all natural numbers n ≥ n₀.\n\nStep 1 (Base Case): Verify P(n₀) is true.\nStep 2 (Inductive Hypothesis): Assume P(k) is true for some arbitrary k ≥ n₀.\nStep 3 (Inductive Step): Using the assumption that P(k) is true, prove P(k+1) is true.\n\nIf both steps succeed, P(n) is true for all n ≥ n₀.\n\nStrong Induction: Instead of assuming only P(k), assume P(n₀), P(n₀+1), ..., P(k) are all true, then prove P(k+1).\n\nCommon applications: proving divisibility (e.g., 6 | n³ - n), inequality proofs (e.g., 2ⁿ > n² for n ≥ 5), summation formulas, and properties of recursive sequences.\n\nKey pitfall: the inductive step alone is insufficient. A base case is essential — without it, you can 'prove' false statements."
+  },
+  {
+    "id": "limits-continuity-differentiability",
+    "title": "Limits, Continuity and Differentiability",
+    "category": "Calculus",
+    "explanation": "Limit: lim(x→a) f(x) = L means f(x) approaches L as x approaches a. The limit exists iff left-hand limit equals right-hand limit.\n\nKey limits: lim(x→0) sin(x)/x = 1, lim(x→0) (eˣ-1)/x = 1, lim(x→0) (1+x)^(1/x) = e, lim(x→0) ln(1+x)/x = 1.\n\nL'Hôpital's Rule: for 0/0 or ∞/∞ forms, lim f(x)/g(x) = lim f'(x)/g'(x).\n\nContinuity at a point a: f(a) exists, lim(x→a) f(x) exists, and they're equal. Types of discontinuity: removable, jump, infinite.\n\nDifferentiability: f'(a) = lim(h→0) [f(a+h) - f(a)]/h. Differentiability implies continuity, but not vice versa (e.g., |x| at x=0 is continuous but not differentiable).\n\nDifferentiation rules: product rule (fg)' = f'g + fg', quotient rule (f/g)' = (f'g - fg')/g², chain rule (f∘g)' = f'(g(x))·g'(x)."
+  },
+  {
+    "id": "application-of-derivatives",
+    "title": "Application of Derivatives",
+    "category": "Calculus",
+    "explanation": "Rate of Change: if y = f(x), then dy/dx represents the rate of change of y with respect to x.\n\nTangent and Normal: at point (x₀, y₀), tangent slope = f'(x₀), normal slope = -1/f'(x₀).\n\nIncreasing/Decreasing: f is increasing on [a,b] if f'(x) > 0 for all x in (a,b), decreasing if f'(x) < 0.\n\nMaxima and Minima: First derivative test — if f' changes from + to - at c, local maximum; from - to +, local minimum. Second derivative test — if f'(c) = 0 and f''(c) < 0, local max; f''(c) > 0, local min.\n\nRolle's Theorem: if f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b), then ∃c ∈ (a,b) where f'(c) = 0.\n\nMean Value Theorem: if f is continuous on [a,b] and differentiable on (a,b), then ∃c ∈ (a,b) where f'(c) = (f(b) - f(a))/(b - a).\n\nApproximation: f(x + Δx) ≈ f(x) + f'(x)·Δx."
+  },
+  {
+    "id": "integrals",
+    "title": "Indefinite and Definite Integrals",
+    "category": "Calculus",
+    "explanation": "Indefinite integral: ∫f(x)dx = F(x) + C where F'(x) = f(x).\n\nBasic formulas: ∫xⁿdx = xⁿ⁺¹/(n+1) + C, ∫eˣdx = eˣ + C, ∫sin(x)dx = -cos(x) + C, ∫1/x dx = ln|x| + C.\n\nTechniques: Substitution — if ∫f(g(x))g'(x)dx, let u = g(x). Integration by parts — ∫u dv = uv - ∫v du (LIATE rule for choosing u). Partial fractions — decompose rational functions.\n\nDefinite integral: ∫ₐᵇ f(x)dx = F(b) - F(a) (Fundamental Theorem of Calculus).\n\nProperties: ∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx, ∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫ᶜᵇ f(x)dx.\n\nKing's property: ∫₀ᵃ f(x)dx = ∫₀ᵃ f(a-x)dx. For even functions: ∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx. For odd functions: ∫₋ₐᵃ f(x)dx = 0.\n\nApplications: area under curve, area between curves."
+  },
+  {
+    "id": "differential-equations",
+    "title": "Differential Equations",
+    "category": "Calculus",
+    "explanation": "A differential equation involves derivatives of an unknown function. Order = highest derivative, degree = power of highest derivative (when polynomial in derivatives).\n\nSeparable equations: dy/dx = f(x)g(y) → ∫dy/g(y) = ∫f(x)dx.\n\nHomogeneous equations: dy/dx = f(y/x). Substitute v = y/x, then y = vx, dy/dx = v + x·dv/dx.\n\nLinear first-order: dy/dx + P(x)y = Q(x). Integrating factor: μ = e^(∫P(x)dx). Solution: y·μ = ∫Q(x)·μ dx.\n\nBernoulli equation: dy/dx + P(x)y = Q(x)yⁿ. Substitute v = y^(1-n) to convert to linear.\n\nExact equations: M(x,y)dx + N(x,y)dy = 0 is exact if ∂M/∂y = ∂N/∂x.\n\nApplications: growth/decay (dN/dt = kN → N = N₀eᵏᵗ), cooling (dT/dt = -k(T-Tₛ)), circuits, mixing problems."
+  },
+  {
+    "id": "straight-lines",
+    "title": "Straight Lines",
+    "category": "Coordinate Geometry",
+    "explanation": "A straight line in 2D can be represented in multiple forms:\n\nSlope-intercept: y = mx + c where m is slope, c is y-intercept.\nPoint-slope: y - y₁ = m(x - x₁).\nTwo-point: (y - y₁)/(y₂ - y₁) = (x - x₁)/(x₂ - x₁).\nIntercept: x/a + y/b = 1 where a, b are x and y intercepts.\nGeneral: ax + by + c = 0.\n\nSlope between two points: m = (y₂ - y₁)/(x₂ - x₁).\n\nParallel lines have equal slopes (m₁ = m₂). Perpendicular lines: m₁ · m₂ = -1.\n\nAngle between two lines: tan(θ) = |m₁ - m₂|/(1 + m₁m₂).\n\nDistance from point (x₁,y₁) to line ax + by + c = 0: d = |ax₁ + by₁ + c|/√(a² + b²).\n\nDistance between parallel lines ax + by + c₁ = 0 and ax + by + c₂ = 0: d = |c₁ - c₂|/√(a² + b²).\n\nFamily of lines: L₁ + λL₂ = 0 passes through the intersection of L₁ = 0 and L₂ = 0."
+  },
+  {
+    "id": "circles",
+    "title": "Circles",
+    "category": "Coordinate Geometry",
+    "explanation": "Standard form: (x - h)² + (y - k)² = r² with center (h,k) and radius r.\n\nGeneral form: x² + y² + 2gx + 2fy + c = 0 with center (-g, -f) and radius √(g² + f² - c).\n\nParametric: x = h + r·cosθ, y = k + r·sinθ.\n\nTangent to circle x² + y² = r² at point (x₁, y₁): xx₁ + yy₁ = r².\n\nCondition for tangency: line y = mx + c is tangent to x² + y² = r² when c² = r²(1 + m²).\n\nLength of tangent from external point (x₁, y₁) to circle: √(x₁² + y₁² + 2gx₁ + 2fy₁ + c).\n\nTwo circles: external tangent when d = r₁ + r₂, internal tangent when d = |r₁ - r₂|. Radical axis: S₁ - S₂ = 0 (locus of points with equal tangent lengths to both circles).\n\nPower of a point: PA · PB = |PT|² where T is tangent point."
+  },
+  {
+    "id": "conic-sections",
+    "title": "Conic Sections (Parabola, Ellipse, Hyperbola)",
+    "category": "Coordinate Geometry",
+    "explanation": "Conics are curves formed by intersecting a plane with a double cone. Eccentricity e determines the type.\n\nParabola (e = 1): y² = 4ax. Focus (a,0), directrix x = -a, vertex at origin. Tangent at (at², 2at): ty = x + at². Focal chord property: if endpoints are t₁, t₂ then t₁·t₂ = -1.\n\nEllipse (0 < e < 1): x²/a² + y²/b² = 1 (a > b). Foci (±ae, 0), eccentricity e = √(1 - b²/a²). Sum of distances from any point to foci = 2a. Tangent at (x₁,y₁): xx₁/a² + yy₁/b² = 1.\n\nHyperbola (e > 1): x²/a² - y²/b² = 1. Foci (±ae, 0), eccentricity e = √(1 + b²/a²). |difference of distances to foci| = 2a. Asymptotes: y = ±(b/a)x. Rectangular hyperbola: xy = c² (a = b, e = √2).\n\nGeneral second-degree equation: ax² + 2hxy + by² + 2gx + 2fy + c = 0. Discriminant Δ = abc + 2fgh - af² - bg² - ch² = 0 for degenerate conics."
+  },
+  {
+    "id": "3d-geometry",
+    "title": "Vectors and 3D Space",
+    "category": "Three-Dimensional Geometry",
+    "explanation": "In 3D space, a point is P(x, y, z). Distance between P₁(x₁,y₁,z₁) and P₂(x₂,y₂,z₂): d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).\n\nDirection cosines: l = cosα, m = cosβ, n = cosγ where α, β, γ are angles with x, y, z axes. Always l² + m² + n² = 1.\n\nEquation of a line: (x-x₁)/a = (y-y₁)/b = (z-z₁)/c (symmetric form) or r⃗ = a⃗ + λb⃗ (vector form).\n\nAngle between two lines: cosθ = |l₁l₂ + m₁m₂ + n₁n₂| or cosθ = |a⃗·b⃗|/(|a⃗||b⃗|).\n\nEquation of a plane: ax + by + cz + d = 0 or r⃗·n⃗ = d. Normal to plane: (a, b, c).\n\nDistance from point to plane: |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).\n\nSkew lines: two lines that are neither parallel nor intersecting. Shortest distance between skew lines r⃗ = a⃗₁ + λb⃗₁ and r⃗ = a⃗₂ + μb⃗₂ is |(a⃗₂ - a⃗₁)·(b⃗₁ × b⃗₂)|/|b⃗₁ × b⃗₂|."
+  },
+  {
+    "id": "vector-algebra",
+    "title": "Vector Operations, Scalar and Vector Products",
+    "category": "Vector Algebra",
+    "explanation": "A vector has magnitude and direction: a⃗ = aₓî + aᵧĵ + a_zk̂. Magnitude: |a⃗| = √(aₓ² + aᵧ² + a_z²). Unit vector: â = a⃗/|a⃗|.\n\nVector addition: parallelogram law, triangle law. Properties: commutative, associative.\n\nScalar (dot) product: a⃗·b⃗ = |a⃗||b⃗|cosθ = aₓbₓ + aᵧbᵧ + a_zb_z. Properties: commutative, distributive. a⃗·b⃗ = 0 iff perpendicular.\n\nVector (cross) product: a⃗ × b⃗ = |a⃗||b⃗|sinθ n̂ (right-hand rule). Computed as determinant: |î ĵ k̂; aₓ aᵧ a_z; bₓ bᵧ b_z|. Properties: anti-commutative (a⃗×b⃗ = -b⃗×a⃗), |a⃗×b⃗| = area of parallelogram.\n\nScalar triple product: [a⃗ b⃗ c⃗] = a⃗·(b⃗×c⃗) = volume of parallelepiped. Zero iff vectors are coplanar.\n\nVector triple product: a⃗×(b⃗×c⃗) = (a⃗·c⃗)b⃗ - (a⃗·b⃗)c⃗ (BAC-CAB rule).\n\nProjection of a⃗ on b⃗: (a⃗·b⃗)/|b⃗|. Component: (a⃗·b̂)b̂."
+  },
+  {
+    "id": "statistics-probability",
+    "title": "Measures of Dispersion and Probability Distributions",
+    "category": "Statistics and Probability",
+    "explanation": "Measures of Central Tendency: Mean (x̄ = Σxᵢ/n), Median (middle value), Mode (most frequent).\n\nMeasures of Dispersion: Range = max - min. Variance σ² = Σ(xᵢ - x̄)²/n. Standard deviation σ = √(variance). Shortcut: σ² = (Σxᵢ²/n) - x̄².\n\nProbability: P(E) = favorable outcomes / total outcomes. 0 ≤ P(E) ≤ 1. P(E') = 1 - P(E).\n\nAddition rule: P(A∪B) = P(A) + P(B) - P(A∩B). For mutually exclusive: P(A∪B) = P(A) + P(B).\n\nConditional probability: P(A|B) = P(A∩B)/P(B). Independent events: P(A∩B) = P(A)·P(B).\n\nBayes' Theorem: P(Aᵢ|B) = P(B|Aᵢ)P(Aᵢ) / ΣP(B|Aⱼ)P(Aⱼ).\n\nBinomial distribution: P(X=r) = C(n,r)pʳ(1-p)ⁿ⁻ʳ. Mean = np, Variance = np(1-p).\n\nRandom variable: E(X) = Σxᵢpᵢ, Var(X) = E(X²) - [E(X)]²."
+  },
+  {
+    "id": "trigonometric-ratios-identities",
+    "title": "Trigonometric Ratios and Identities",
+    "category": "Trigonometry",
+    "explanation": "Six ratios: sinθ = opposite/hypotenuse, cosθ = adjacent/hypotenuse, tanθ = sin/cos, cotθ = cos/sin, secθ = 1/cos, cscθ = 1/sin.\n\nPythagorean identities: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = csc²θ.\n\nSum/Difference formulas: sin(A±B) = sinAcosB ± cosAsinB, cos(A±B) = cosAcosB ∓ sinAsinB, tan(A±B) = (tanA ± tanB)/(1 ∓ tanAtanB).\n\nDouble angle: sin2A = 2sinAcosA, cos2A = cos²A - sin²A = 2cos²A - 1 = 1 - 2sin²A, tan2A = 2tanA/(1 - tan²A).\n\nHalf angle: sin(A/2) = ±√((1-cosA)/2), cos(A/2) = ±√((1+cosA)/2).\n\nProduct-to-sum: 2sinAcosB = sin(A+B) + sin(A-B). Sum-to-product: sinC + sinD = 2sin((C+D)/2)cos((C-D)/2).\n\nValues: sin0°=0, sin30°=1/2, sin45°=√2/2, sin60°=√3/2, sin90°=1."
+  },
+  {
+    "id": "trigonometric-equations",
+    "title": "Trigonometric Equations and Inverse Functions",
+    "category": "Trigonometry",
+    "explanation": "General solutions:\nsinθ = sinα → θ = nπ + (-1)ⁿα\ncosθ = cosα → θ = 2nπ ± α\ntanθ = tanα → θ = nπ + α\nwhere n is any integer.\n\nInverse trigonometric functions (principal values):\nsin⁻¹x: domain [-1,1], range [-π/2, π/2]\ncos⁻¹x: domain [-1,1], range [0, π]\ntan⁻¹x: domain ℝ, range (-π/2, π/2)\n\nKey identities:\nsin⁻¹x + cos⁻¹x = π/2\ntan⁻¹x + cot⁻¹x = π/2\ntan⁻¹x + tan⁻¹y = tan⁻¹((x+y)/(1-xy)) when xy < 1\n2tan⁻¹x = sin⁻¹(2x/(1+x²)) = cos⁻¹((1-x²)/(1+x²))\n\nsin⁻¹(sinx) = x only when x ∈ [-π/2, π/2]. Outside this range, use periodicity and symmetry.\n\nHeights and distances: use sinθ, cosθ, tanθ to find unknown heights, distances, and angles in triangles. Sine rule: a/sinA = b/sinB = c/sinC = 2R. Cosine rule: c² = a² + b² - 2ab·cosC."
+  },
+  {
+    "id": "rectangular-coordinates",
+    "title": "Cartesian System of Rectangular Coordinates",
+    "category": "Coordinate Geometry",
+    "explanation": "The Cartesian plane is formed by two perpendicular number lines: the x-axis (horizontal) and y-axis (vertical), intersecting at the origin O(0,0).\n\nFour quadrants: Q1 (+,+), Q2 (-,+), Q3 (-,-), Q4 (+,-).\n\nDistance formula: d = √((x₂-x₁)² + (y₂-y₁)²).\n\nSection formula: point dividing line segment joining (x₁,y₁) and (x₂,y₂) in ratio m:n internally = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). Externally: replace + with -.\n\nMidpoint: ((x₁+x₂)/2, (y₁+y₂)/2).\n\nCentroid of triangle: ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3).\n\nArea of triangle with vertices (x₁,y₁), (x₂,y₂), (x₃,y₃) = ½|x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|.\n\nCollinearity: three points are collinear if the area of the triangle they form is 0.\n\nLocus: the set of all points satisfying a given geometric condition. To find the locus, let the moving point be (h,k), apply the condition, then replace h with x and k with y."
+  }
+]
