@@ -6,6 +6,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { api, type Book } from "../lib/api";
 import { BookCard } from "./BookCard";
@@ -45,7 +46,10 @@ export function BooksSection() {
 
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>Books</Text>
+      <View style={styles.sectionHeader}>
+        <Ionicons name="book-outline" size={22} color="#10B981" />
+        <Text style={styles.heading}>Books</Text>
+      </View>
 
       <ScrollView
         horizontal
@@ -63,11 +67,7 @@ export function BooksSection() {
       </ScrollView>
 
       {loading ? (
-        <ActivityIndicator
-          style={styles.loader}
-          size="small"
-          color="#2563eb"
-        />
+        <ActivityIndicator style={styles.loader} size="small" color="#10B981" />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
       ) : (
@@ -84,15 +84,21 @@ export function BooksSection() {
 }
 
 const styles = StyleSheet.create({
-  section: { marginBottom: 24 },
-  heading: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#1e293b",
-    paddingHorizontal: 16,
-    marginBottom: 10,
+  section: { marginBottom: 32 },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    marginBottom: 14,
+    gap: 8,
   },
-  chipContent: { paddingHorizontal: 16, paddingBottom: 12 },
-  loader: { paddingVertical: 20 },
-  error: { textAlign: "center", color: "#dc2626", paddingVertical: 12, fontSize: 14 },
+  heading: {
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#111827",
+    letterSpacing: -0.3,
+  },
+  chipContent: { paddingHorizontal: 20, paddingBottom: 14 },
+  loader: { paddingVertical: 24 },
+  error: { textAlign: "center", color: "#EF4444", paddingVertical: 12, fontSize: 14 },
 });

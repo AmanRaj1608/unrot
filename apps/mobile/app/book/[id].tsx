@@ -34,7 +34,7 @@ export default function BookDetailScreen() {
 
   if (loading) {
     return (
-      <ActivityIndicator style={styles.center} size="large" color="#2563eb" />
+      <ActivityIndicator style={styles.center} size="large" color="#10B981" />
     );
   }
 
@@ -81,44 +81,56 @@ export default function BookDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8fafc" },
+  container: { flex: 1, backgroundColor: "#FAFAFA" },
   content: { padding: 20, paddingBottom: 40 },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },
-  error: { textAlign: "center", color: "#dc2626", marginTop: 40, fontSize: 15 },
-  header: { flexDirection: "row", marginBottom: 20 },
+  error: { textAlign: "center", color: "#EF4444", marginTop: 40, fontSize: 15 },
+  header: { flexDirection: "row", marginBottom: 24 },
   cover: {
     width: 100,
     height: 150,
-    borderRadius: 8,
-    backgroundColor: "#e2e8f0",
+    borderRadius: 12,
+    backgroundColor: "#F3F4F6",
   },
   headerInfo: { flex: 1, marginLeft: 16, justifyContent: "center" },
-  title: { fontSize: 20, fontWeight: "700", color: "#1e293b", marginBottom: 4 },
-  author: { fontSize: 14, color: "#64748b", marginBottom: 8 },
+  title: {
+    fontSize: 20,
+    fontWeight: "800",
+    color: "#111827",
+    marginBottom: 6,
+    letterSpacing: -0.3,
+  },
+  author: { fontSize: 14, color: "#6B7280", marginBottom: 10 },
   badge: {
     alignSelf: "flex-start",
-    backgroundColor: "#eff6ff",
+    backgroundColor: "#ECFDF5",
     paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 12,
+    paddingVertical: 5,
+    borderRadius: 100,
   },
-  badgeText: { fontSize: 12, color: "#2563eb", textTransform: "capitalize" },
+  badgeText: {
+    fontSize: 12,
+    color: "#059669",
+    textTransform: "capitalize",
+    fontWeight: "600",
+  },
   speechRow: { alignItems: "flex-start", marginBottom: 24 },
   sectionTitle: {
-    fontSize: 17,
-    fontWeight: "700",
-    color: "#1e293b",
-    marginBottom: 8,
+    fontSize: 18,
+    fontWeight: "800",
+    color: "#111827",
+    marginBottom: 10,
     marginTop: 4,
+    letterSpacing: -0.2,
   },
-  body: { fontSize: 15, lineHeight: 24, color: "#334155", marginBottom: 20 },
-  takeaway: { flexDirection: "row", marginBottom: 10, paddingRight: 8 },
+  body: { fontSize: 15, lineHeight: 26, color: "#4B5563", marginBottom: 24 },
+  takeaway: { flexDirection: "row", marginBottom: 12, paddingRight: 8 },
   bullet: {
     fontSize: 14,
-    fontWeight: "600",
-    color: "#2563eb",
-    marginRight: 8,
-    minWidth: 18,
+    fontWeight: "700",
+    color: "#10B981",
+    marginRight: 10,
+    minWidth: 20,
   },
-  takeawayText: { flex: 1, fontSize: 14, lineHeight: 22, color: "#475569" },
+  takeawayText: { flex: 1, fontSize: 14, lineHeight: 22, color: "#4B5563" },
 });

@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { View, ScrollView, Text, ActivityIndicator, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import * as WebBrowser from "expo-web-browser";
 import { api, type Article } from "../lib/api";
 import { ArticleCard } from "./ArticleCard";
@@ -46,16 +47,12 @@ export function NewsSection() {
     });
   };
 
-  const today = new Date().toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>News</Text>
-      <Text style={styles.date}>{today}</Text>
+      <View style={styles.sectionHeader}>
+        <Ionicons name="newspaper-outline" size={22} color="#10B981" />
+        <Text style={styles.heading}>News</Text>
+      </View>
 
       <ScrollView
         horizontal
@@ -73,11 +70,7 @@ export function NewsSection() {
       </ScrollView>
 
       {loading ? (
-        <ActivityIndicator
-          style={styles.loader}
-          size="small"
-          color="#2563eb"
-        />
+        <ActivityIndicator style={styles.loader} size="small" color="#10B981" />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
       ) : articles.length === 0 ? (
@@ -96,23 +89,22 @@ export function NewsSection() {
 }
 
 const styles = StyleSheet.create({
-  section: { marginBottom: 24 },
+  section: { marginBottom: 32 },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    marginBottom: 14,
+    gap: 8,
+  },
   heading: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#1e293b",
-    paddingHorizontal: 16,
-    marginBottom: 2,
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#111827",
+    letterSpacing: -0.3,
   },
-  date: {
-    fontSize: 13,
-    color: "#94a3b8",
-    fontWeight: "500",
-    paddingHorizontal: 16,
-    marginBottom: 10,
-  },
-  chipContent: { paddingHorizontal: 16, paddingBottom: 12 },
-  loader: { paddingVertical: 20 },
-  error: { textAlign: "center", color: "#dc2626", paddingVertical: 12, fontSize: 14 },
-  empty: { textAlign: "center", color: "#94a3b8", paddingVertical: 12, fontSize: 14 },
+  chipContent: { paddingHorizontal: 20, paddingBottom: 14 },
+  loader: { paddingVertical: 24 },
+  error: { textAlign: "center", color: "#EF4444", paddingVertical: 12, fontSize: 14 },
+  empty: { textAlign: "center", color: "#9CA3AF", paddingVertical: 12, fontSize: 14 },
 });

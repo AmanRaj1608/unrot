@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { View, Text, Pressable, ActivityIndicator, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { api, type MathTopic } from "../lib/api";
 import { SpeechButton } from "./SpeechButton";
 import { useSpeech } from "../hooks/useSpeech";
@@ -30,13 +31,16 @@ export function MathSection() {
 
   return (
     <View style={styles.section}>
-      <Text style={styles.heading}>Math Refresher</Text>
+      <View style={styles.sectionHeader}>
+        <Ionicons name="calculator-outline" size={22} color="#10B981" />
+        <Text style={styles.heading}>Math Refresher</Text>
+      </View>
 
       {loading ? (
         <ActivityIndicator
           style={styles.loader}
           size="small"
-          color="#2563eb"
+          color="#10B981"
         />
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
@@ -71,45 +75,54 @@ export function MathSection() {
 
 const styles = StyleSheet.create({
   section: { marginBottom: 40 },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    marginBottom: 14,
+    gap: 8,
+  },
   heading: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#1e293b",
-    paddingHorizontal: 16,
-    marginBottom: 12,
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#111827",
+    letterSpacing: -0.3,
   },
   card: {
-    backgroundColor: "#ffffff",
-    borderRadius: 12,
-    padding: 16,
-    marginHorizontal: 16,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 2,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 16,
+    padding: 18,
+    marginHorizontal: 20,
+    borderWidth: 1,
+    borderColor: "#F3F4F6",
   },
   badge: {
     alignSelf: "flex-start",
-    backgroundColor: "#eff6ff",
+    backgroundColor: "#ECFDF5",
     paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 12,
-    marginBottom: 8,
+    paddingVertical: 5,
+    borderRadius: 100,
+    marginBottom: 10,
   },
-  badgeText: { fontSize: 12, color: "#2563eb", fontWeight: "600" },
-  title: { fontSize: 18, fontWeight: "700", color: "#1e293b", marginBottom: 12 },
-  speechRow: { alignItems: "flex-start", marginBottom: 12 },
-  explanation: { fontSize: 14, lineHeight: 24, color: "#334155" },
+  badgeText: { fontSize: 12, color: "#059669", fontWeight: "600" },
+  title: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#111827",
+    marginBottom: 12,
+    letterSpacing: -0.2,
+  },
+  speechRow: { alignItems: "flex-start", marginBottom: 14 },
+  explanation: { fontSize: 14, lineHeight: 24, color: "#4B5563" },
   nextButton: {
-    backgroundColor: "#2563eb",
-    marginHorizontal: 16,
-    marginTop: 14,
+    backgroundColor: "#10B981",
+    marginHorizontal: 20,
+    marginTop: 16,
     paddingVertical: 14,
-    borderRadius: 12,
+    borderRadius: 14,
     alignItems: "center",
   },
-  nextText: { color: "#ffffff", fontSize: 16, fontWeight: "700" },
-  loader: { paddingVertical: 20 },
-  error: { textAlign: "center", color: "#dc2626", paddingVertical: 12, fontSize: 14 },
+  nextText: { color: "#FFFFFF", fontSize: 16, fontWeight: "700" },
+  loader: { paddingVertical: 24 },
+  error: { textAlign: "center", color: "#EF4444", paddingVertical: 12, fontSize: 14 },
 });

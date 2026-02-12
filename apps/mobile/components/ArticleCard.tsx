@@ -27,16 +27,13 @@ export function ArticleCard({ article, onPress }: Props) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#ffffff",
-    borderRadius: 12,
-    padding: 14,
-    marginHorizontal: 16,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 16,
+    padding: 16,
+    marginHorizontal: 20,
     marginBottom: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: "#F3F4F6",
   },
   meta: {
     flexDirection: "row",
@@ -46,24 +43,25 @@ const styles = StyleSheet.create({
   },
   section: {
     fontSize: 11,
-    fontWeight: "600",
-    color: "#2563eb",
+    fontWeight: "700",
+    color: "#10B981",
     textTransform: "uppercase",
     letterSpacing: 0.5,
   },
   readTime: {
     fontSize: 11,
-    color: "#94a3b8",
+    color: "#9CA3AF",
   },
   title: {
     fontSize: 15,
-    fontWeight: "600",
-    color: "#1e293b",
+    fontWeight: "700",
+    color: "#111827",
     marginBottom: 6,
+    letterSpacing: -0.2,
   },
   summary: {
     fontSize: 13,
     lineHeight: 20,
-    color: "#64748b",
+    color: "#6B7280",
   },
 });

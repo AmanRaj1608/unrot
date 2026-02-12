@@ -21,25 +21,23 @@ export function CategoryChip({ label, selected, onPress }: Props) {
 
 const styles = StyleSheet.create({
   chip: {
-    paddingHorizontal: 14,
-    paddingVertical: 7,
-    borderRadius: 20,
-    backgroundColor: "#f1f5f9",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 100,
+    backgroundColor: "#F3F4F6",
     marginRight: 8,
-    borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   chipSelected: {
-    backgroundColor: "#2563eb",
-    borderColor: "#2563eb",
+    backgroundColor: "#10B981",
   },
   text: {
     fontSize: 13,
-    color: "#475569",
+    color: "#6B7280",
+    fontWeight: "500",
     textTransform: "capitalize",
   },
   textSelected: {
-    color: "#ffffff",
-    fontWeight: "600",
+    color: "#FFFFFF",
+    fontWeight: "700",
   },
 });

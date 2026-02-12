@@ -1,4 +1,5 @@
-import { Pressable, Text, StyleSheet } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 interface Props {
   isSpeaking: boolean;
@@ -11,31 +12,25 @@ export function SpeechButton({ isSpeaking, onPress }: Props) {
       style={[styles.button, isSpeaking && styles.buttonActive]}
       onPress={onPress}
     >
-      <Text style={[styles.text, isSpeaking && styles.textActive]}>
-        {isSpeaking ? "Stop" : "Listen"}
-      </Text>
+      <Ionicons
+        name={isSpeaking ? "stop" : "play"}
+        size={16}
+        color="#FFFFFF"
+      />
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
   button: {
-    flexDirection: "row",
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#10B981",
     alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 24,
-    backgroundColor: "#2563eb",
+    justifyContent: "center",
   },
   buttonActive: {
-    backgroundColor: "#dc2626",
-  },
-  text: {
-    color: "#ffffff",
-    fontSize: 15,
-    fontWeight: "600",
-  },
-  textActive: {
-    color: "#ffffff",
+    backgroundColor: "#EF4444",
   },
 });
