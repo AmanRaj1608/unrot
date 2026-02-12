@@ -49,6 +49,18 @@ export interface MathTopic {
   explanation?: string;
 }
 
+export interface PullRequest {
+  id: number;
+  number: number;
+  title: string;
+  author: string;
+  description: string;
+  state: string;
+  createdAt: string;
+  updatedAt: string;
+  htmlUrl: string;
+}
+
 export const api = {
   books: {
     list: (category?: string) =>
@@ -65,5 +77,9 @@ export const api = {
     topics: () => get<MathTopic[]>("/math/topics"),
     get: (id: string) => get<MathTopic>(`/math/topics/${id}`),
     categories: () => get<string[]>("/math/categories"),
+  },
+  github: {
+    pulls: (owner: string, repo: string) =>
+      get<PullRequest[]>(`/github/repos/${owner}/${repo}/pulls`),
   },
 };
