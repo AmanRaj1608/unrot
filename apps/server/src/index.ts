@@ -3,12 +3,14 @@ import { cors } from "@elysiajs/cors";
 import { books } from "./books";
 import { news } from "./news";
 import { math } from "./math";
+import { github } from "./github";
 
 export const app = new Elysia()
   .use(cors())
   .use(books)
   .use(news)
   .use(math)
+  .use(github)
   .get("/health", () => ({ status: "ok" }));
 
 if (import.meta.main) {

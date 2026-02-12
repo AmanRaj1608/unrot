@@ -2,7 +2,7 @@ import { Elysia, t } from "elysia";
 import { fetchTldr } from "./scraper";
 import { getCached, setCache } from "./cache";
 
-const CATEGORIES = ["ai", "crypto", "devops", "founders"] as const;
+const CATEGORIES = ["tech", "ai", "webdev", "infosec", "design", "crypto", "devops", "founders"] as const;
 
 function today(): string {
   return new Date().toISOString().split("T")[0];
