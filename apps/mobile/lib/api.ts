@@ -1,4 +1,20 @@
-const BASE_URL = process.env.EXPO_PUBLIC_API_URL || "http://localhost:3000";
+import Constants from "expo-constants";
+
+function getBaseUrl(): string {
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL;
+  }
+  // In dev, use the same host that Expo is serving from
+  const debuggerHost =
+    Constants.expoConfig?.hostUri ?? Constants.manifest2?.extra?.expoGo?.debuggerHost;
+  if (debuggerHost) {
+    const host = debuggerHost.split(":")[0];
+    return `http://${host}:3000`;
+  }
+  return "http://localhost:3000";
+}
+
+const BASE_URL = getBaseUrl();
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE_URL}${path}`);

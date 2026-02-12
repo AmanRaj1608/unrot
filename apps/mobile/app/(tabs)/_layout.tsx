@@ -10,29 +10,21 @@ export default function TabLayout() {
     >
       <Tabs.Screen
         name="index"
-        options={{ href: null }}
-      />
-      <Tabs.Screen
-        name="books"
         options={{
-          title: "Books",
-          tabBarLabel: "Books",
+          title: "Home",
+          tabBarLabel: "Home",
         }}
       />
       <Tabs.Screen
-        name="news"
+        name="settings"
         options={{
-          title: "News",
-          tabBarLabel: "News",
+          title: "Settings",
+          tabBarLabel: "Settings",
         }}
       />
-      <Tabs.Screen
-        name="math"
-        options={{
-          title: "Math",
-          tabBarLabel: "Math",
-        }}
-      />
+      <Tabs.Screen name="books" options={{ href: null }} />
+      <Tabs.Screen name="news" options={{ href: null }} />
+      <Tabs.Screen name="math" options={{ href: null }} />
     </Tabs>
   );
 }
