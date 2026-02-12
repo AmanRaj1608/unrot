@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { api } from "../lib/api";
+import { useRepos } from "../lib/RepoContext";
 import type { FeedItem, FeedFilter } from "../lib/feed";
 
 function interleave(groups: FeedItem[][]): FeedItem[] {
@@ -21,15 +22,21 @@ export function useFeed() {
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<FeedFilter>("all");
+  const { repos } = useRepos();
 
   const load = useCallback(async () => {
     try {
       setError(null);
 
-      const [newsArticles, books, mathTopic] = await Promise.all([
+      const prPromises = repos.map((r) =>
+        api.github.pulls(r.owner, r.repo).catch(() => [])
+      );
+
+      const [newsArticles, books, mathTopic, ...prResults] = await Promise.all([
         api.news.get("tech").catch(() => []),
         api.books.list().catch(() => []),
         api.math.random().catch(() => null),
+        ...prPromises,
       ]);
 
       const newsItems: FeedItem[] = newsArticles.map((a, i) => ({
@@ -48,14 +55,20 @@ export function useFeed() {
         ? [{ type: "math" as const, data: mathTopic, id: `math-${mathTopic.id}` }]
         : [];
 
-      setItems(interleave([newsItems, bookItems, mathItems]));
+      const githubItems: FeedItem[] = prResults.flat().map((pr) => ({
+        type: "github" as const,
+        data: pr,
+        id: `github-${pr.id}`,
+      }));
+
+      setItems(interleave([newsItems, bookItems, mathItems, githubItems]));
     } catch {
       setError("Failed to load feed");
     } finally {
       setLoading(false);
       setRefreshing(false);
     }
-  }, []);
+  }, [repos]);
 
   useEffect(() => {
     load();
