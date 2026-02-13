@@ -37,6 +37,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="math"
+        options={{
+          title: "Math",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="sparkles-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="settings"
         options={{
           title: "Settings",
@@ -47,7 +56,6 @@ export default function TabLayout() {
       />
       <Tabs.Screen name="books" options={{ href: null }} />
       <Tabs.Screen name="news" options={{ href: null }} />
-      <Tabs.Screen name="math" options={{ href: null }} />
     </Tabs>
   );
 }

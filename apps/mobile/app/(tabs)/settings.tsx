@@ -10,9 +10,14 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRepos } from "../../lib/RepoContext";
+import { useUser } from "../../lib/UserContext";
+import { api } from "../../lib/api";
+
+const USERS = ["aman", "another"] as const;
 
 export default function SettingsScreen() {
   const { repos, addRepo, removeRepo } = useRepos();
+  const { userId, setUserId } = useUser();
   const [input, setInput] = useState("");
 
   const handleAdd = () => {
@@ -23,7 +28,13 @@ export default function SettingsScreen() {
       return;
     }
     addRepo(parts[0], parts[1]);
+    api.feed.repos.add(parts[0], parts[1]).catch(() => {});
     setInput("");
+  };
+
+  const handleRemove = (owner: string, repo: string) => {
+    removeRepo(owner, repo);
+    api.feed.repos.remove(owner, repo).catch(() => {});
   };
 
   return (
@@ -36,6 +47,38 @@ export default function SettingsScreen() {
       </View>
 
       <View style={styles.section}>
+        <View style={styles.sectionHeader}>
+          <Ionicons name="person-outline" size={20} color="#111827" />
+          <Text style={styles.sectionTitle}>User</Text>
+        </View>
+        <Text style={styles.sectionHint}>
+          Select your profile to track viewed items.
+        </Text>
+
+        {USERS.map((id) => (
+          <Pressable
+            key={id}
+            style={styles.radioRow}
+            onPress={() => setUserId(id)}
+          >
+            <Ionicons
+              name={userId === id ? "radio-button-on" : "radio-button-off"}
+              size={20}
+              color={userId === id ? "#10B981" : "#9CA3AF"}
+            />
+            <Text
+              style={[
+                styles.radioText,
+                userId === id && styles.radioTextSelected,
+              ]}
+            >
+              {id}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+
+      <View style={[styles.section, { marginTop: 24 }]}>
         <View style={styles.sectionHeader}>
           <Ionicons name="logo-github" size={20} color="#111827" />
           <Text style={styles.sectionTitle}>GitHub Repos</Text>
@@ -65,7 +108,7 @@ export default function SettingsScreen() {
           <View key={`${r.owner}/${r.repo}`} style={styles.repoRow}>
             <Ionicons name="git-branch-outline" size={16} color="#6B7280" />
             <Text style={styles.repoText}>{r.owner}/{r.repo}</Text>
-            <Pressable onPress={() => removeRepo(r.owner, r.repo)}>
+            <Pressable onPress={() => handleRemove(r.owner, r.repo)}>
               <Ionicons name="close-circle" size={20} color="#9CA3AF" />
             </Pressable>
           </View>
@@ -164,6 +207,26 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#111827",
     fontWeight: "500",
+  },
+  radioRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 8,
+    gap: 10,
+    borderWidth: 1,
+    borderColor: "#F3F4F6",
+  },
+  radioText: {
+    fontSize: 15,
+    color: "#6B7280",
+    fontWeight: "500",
+  },
+  radioTextSelected: {
+    color: "#111827",
+    fontWeight: "700",
   },
   emptyText: {
     fontSize: 14,

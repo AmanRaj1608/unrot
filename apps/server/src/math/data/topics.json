@@ -1,122 +1,176 @@
 [
   {
     "id": "sets-relations-functions",
-    "title": "Sets, Relations and Functions",
+    "title": "Sets, Relations, and Functions",
     "category": "Algebra",
-    "explanation": "A set is a well-defined collection of distinct objects. Sets can be described in roster form {1, 2, 3} or set-builder form {x : x is a natural number, x < 4}.\n\nKey operations: Union (A ∪ B), Intersection (A ∩ B), Difference (A - B), Complement (A').\n\nDe Morgan's Laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.\n\nA Relation R from set A to set B is a subset of A × B. A relation on a set A can be reflexive (aRa for all a), symmetric (aRb implies bRa), transitive (aRb and bRc implies aRc), or an equivalence relation (all three).\n\nA Function f: A → B assigns each element of A exactly one element of B. Types: one-one (injective) if f(a₁) = f(a₂) implies a₁ = a₂, onto (surjective) if range = codomain, bijective if both. Composition: (g∘f)(x) = g(f(x)). Inverse f⁻¹ exists only for bijective functions."
+    "explanation": "Core ideas:\nA set is a well-defined collection of distinct elements. Common representations are roster form and set-builder form. Operations include union, intersection, difference, and complement.\n\nRelations are subsets of A x B. On a set A, a relation can be reflexive, symmetric, and transitive; if all three hold, it is an equivalence relation that partitions A into equivalence classes.\n\nA function f: A -> B maps every input in A to exactly one output in B. Key terms: domain, codomain, range, one-one (injective), onto (surjective), bijective, inverse, and composition.\n\nProblem toolkit:\nUse Venn diagrams for set identities, cartesian products for relations, and mapping/graph checks for function validity.\n\nReal-life usage:\nSet operations power SQL queries and search filtering. Relations model database tables and social network links. Functions model pricing, sensor calibration, and machine-learning feature transforms."
   },
   {
     "id": "complex-numbers",
     "title": "Complex Numbers and Quadratic Equations",
     "category": "Algebra",
-    "explanation": "A complex number z = a + bi where i = √(-1), i² = -1. The real part is Re(z) = a, imaginary part Im(z) = b.\n\nModulus: |z| = √(a² + b²). Conjugate: z̄ = a - bi. Properties: z·z̄ = |z|², |z₁z₂| = |z₁||z₂|.\n\nPolar form: z = r(cosθ + i sinθ) = re^(iθ) where r = |z| and θ = arg(z).\n\nDe Moivre's Theorem: (cosθ + i sinθ)ⁿ = cos(nθ) + i sin(nθ).\n\nQuadratic equation ax² + bx + c = 0 has roots x = (-b ± √(b² - 4ac)) / 2a. Discriminant D = b² - 4ac: D > 0 gives real distinct roots, D = 0 gives equal roots, D < 0 gives complex conjugate roots.\n\nVieta's formulas: sum of roots = -b/a, product of roots = c/a."
+    "explanation": "Core ideas:\nA complex number is z = a + bi, where i^2 = -1. Magnitude: |z| = sqrt(a^2 + b^2). Conjugate: z_bar = a - bi. Polar/exponential form: z = r(cos theta + i sin theta) = r e^(i theta).\n\nDe Moivre's theorem: (cos theta + i sin theta)^n = cos(n theta) + i sin(n theta). Roots of unity and nth roots are naturally handled in polar form.\n\nFor ax^2 + bx + c = 0, roots are (-b +/- sqrt(b^2 - 4ac)) / (2a). Discriminant controls root type. When discriminant < 0, roots are complex conjugates.\n\nProblem toolkit:\nSwitch to polar form for powers/roots; use conjugates for division; apply Vieta relations (sum = -b/a, product = c/a).\n\nReal-life usage:\nElectrical engineering uses complex numbers for AC circuits, impedance, and phasors. Signal processing and control systems use complex poles/zeros to describe oscillation, damping, and stability."
   },
   {
     "id": "matrices-determinants",
     "title": "Matrices and Determinants",
     "category": "Algebra",
-    "explanation": "A matrix is a rectangular array of numbers arranged in rows and columns. An m×n matrix has m rows and n columns.\n\nMatrix operations: Addition (element-wise, same dimensions), Scalar multiplication, Matrix multiplication (AB exists when cols of A = rows of B, resulting dimensions are rows of A × cols of B).\n\nTranspose: (Aᵀ)ᵢⱼ = Aⱼᵢ. Properties: (AB)ᵀ = BᵀAᵀ.\n\nDeterminant (square matrices only): For 2×2: |a b; c d| = ad - bc. For 3×3: expand along any row/column using cofactors.\n\nProperties: det(AB) = det(A)·det(B), det(Aᵀ) = det(A), swapping rows changes sign, row of zeros means det = 0.\n\nInverse: A⁻¹ = adj(A)/det(A), exists only when det(A) ≠ 0. Cramer's Rule solves AX = B using determinants: xᵢ = det(Aᵢ)/det(A)."
+    "explanation": "Core ideas:\nA matrix is an ordered rectangular array. Key operations: addition, scalar multiplication, matrix multiplication, transpose, and inverse (if it exists).\n\nDeterminant indicates invertibility and geometric scaling. For square A, det(A) != 0 implies A is invertible. Properties: det(AB) = det(A)det(B), det(A^T) = det(A).\n\nRow-reduction gives rank, solves linear systems, and identifies dependence. Eigenvalues/eigenvectors capture directional scaling in linear transforms.\n\nProblem toolkit:\nUse elimination for systems, cofactors/expansion for small determinants, and adj(A)/det(A) or elimination for inverses.\n\nReal-life usage:\nComputer graphics uses matrices for rotation, scaling, projection. Search ranking and network analysis use eigenvectors (for example, PageRank-style models). Machine learning and statistics rely on matrix factorization, covariance matrices, and least-squares systems."
   },
   {
     "id": "permutations-combinations",
     "title": "Permutations and Combinations",
     "category": "Algebra",
-    "explanation": "Fundamental Counting Principle: if task 1 can be done in m ways and task 2 in n ways, both together can be done in m×n ways.\n\nPermutations (order matters): P(n,r) = n!/(n-r)!. Arranging r items from n distinct items.\n\nCombinations (order doesn't matter): C(n,r) = n!/(r!(n-r)!). Choosing r items from n distinct items.\n\nKey properties: C(n,r) = C(n,n-r), C(n,0) = C(n,n) = 1, C(n,r) + C(n,r+1) = C(n+1,r+1) (Pascal's identity).\n\nPermutations with repetition: n!/(p!q!r!...) for arranging n objects where p are alike, q are alike, etc.\n\nCircular permutations: (n-1)! ways to arrange n distinct objects in a circle.\n\nDerangements: number of permutations where no element is in its original position = n!(1 - 1/1! + 1/2! - 1/3! + ... + (-1)ⁿ/n!)."
+    "explanation": "Core ideas:\nCounting starts with the multiplication principle.\nPermutations (order matters): P(n,r) = n!/(n-r)!.\nCombinations (order does not matter): C(n,r) = n!/(r!(n-r)!).\n\nImportant identities: C(n,r) = C(n,n-r), Pascal identity C(n,r) + C(n,r+1) = C(n+1,r+1).\n\nAdvanced patterns include circular permutations, arrangements with repetition, and derangements.\n\nProblem toolkit:\nFirst decide if order matters. Then check constraints (repetition allowed? grouped items? circular arrangement?). Convert word statements into slot-filling or selection models.\n\nReal-life usage:\nUsed in password/keyspace estimation, tournament scheduling, genetics combinations, and reliability/safety event counting. They are also foundational for probability models like binomial and hypergeometric distributions."
   },
   {
     "id": "binomial-theorem",
-    "title": "Binomial Theorem",
+    "title": "Binomial Theorem and Its Applications",
     "category": "Algebra",
-    "explanation": "For any positive integer n: (a + b)ⁿ = Σ C(n,r) · aⁿ⁻ʳ · bʳ for r = 0 to n.\n\nGeneral term: T(r+1) = C(n,r) · aⁿ⁻ʳ · bʳ.\n\nMiddle term: if n is even, the middle term is T(n/2 + 1). If n is odd, there are two middle terms: T((n+1)/2) and T((n+3)/2).\n\nProperties of binomial coefficients: C(n,0) + C(n,1) + ... + C(n,n) = 2ⁿ. C(n,0) - C(n,1) + C(n,2) - ... = 0.\n\nBinomial series for rational index: (1 + x)ⁿ = 1 + nx + n(n-1)x²/2! + n(n-1)(n-2)x³/3! + ... valid for |x| < 1.\n\nMultinomial theorem: (x₁ + x₂ + ... + xₖ)ⁿ = Σ [n!/(n₁!n₂!...nₖ!)] x₁ⁿ¹x₂ⁿ²...xₖⁿᵏ where n₁+n₂+...+nₖ = n."
+    "explanation": "Core ideas:\nFor integer n >= 0:\n(a + b)^n = sum_{r=0 to n} C(n,r) a^(n-r) b^r.\nGeneral term: T_(r+1) = C(n,r) a^(n-r) b^r.\n\nBinomial coefficients form Pascal's triangle and connect algebra with combinatorics. For non-integer exponents, the binomial series is used under convergence conditions (commonly |x| < 1 for (1 + x)^m).\n\nProblem toolkit:\nFind required coefficient by matching powers, use symmetry C(n,r)=C(n,n-r), and apply expansions strategically for approximation when x is small.\n\nReal-life usage:\nUsed in probability (binomial distribution), approximation in numerical methods, and uncertainty propagation. It appears in algorithm analysis, financial approximations, and polynomial modeling."
   },
   {
     "id": "sequences-series",
     "title": "Sequence and Series",
     "category": "Algebra",
-    "explanation": "Arithmetic Progression (AP): a, a+d, a+2d, ... nth term: aₙ = a + (n-1)d. Sum of n terms: Sₙ = n/2 · [2a + (n-1)d] = n/2 · (first + last).\n\nGeometric Progression (GP): a, ar, ar², ... nth term: aₙ = arⁿ⁻¹. Sum of n terms: Sₙ = a(rⁿ - 1)/(r - 1) for r ≠ 1. Sum to infinity (|r| < 1): S∞ = a/(1 - r).\n\nHarmonic Progression (HP): reciprocals form an AP. 1/a, 1/(a+d), 1/(a+2d), ...\n\nRelation between means: AM ≥ GM ≥ HM, with equality when all numbers are equal. AM = (a+b)/2, GM = √(ab), HM = 2ab/(a+b). Also: AM × HM = GM².\n\nSpecial sums: Σk = n(n+1)/2, Σk² = n(n+1)(2n+1)/6, Σk³ = [n(n+1)/2]².\n\nMethod of differences: for series where differences form an AP or GP, find the general term from the difference pattern."
+    "explanation": "Core ideas:\nA sequence is an ordered list; a series is its sum.\nAP: a_n = a + (n-1)d, S_n = n/2[2a + (n-1)d].\nGP: a_n = ar^(n-1), S_n = a(r^n - 1)/(r - 1) for r != 1. If |r| < 1, S_infinity = a/(1-r).\n\nUseful sums: sum k = n(n+1)/2, sum k^2 = n(n+1)(2n+1)/6, sum k^3 = [n(n+1)/2]^2.\n\nProblem toolkit:\nDetect pattern first (difference, ratio, recurrence). For mixed expressions, split into known sum components.\n\nReal-life usage:\nEMI and annuity formulas depend on geometric series. Algorithm complexity and recurrence-based runtime estimates use sequences/series. Signal decomposition and numerical approximations also rely on series behavior."
   },
   {
     "id": "mathematical-induction",
     "title": "Mathematical Induction",
     "category": "Algebra",
-    "explanation": "The Principle of Mathematical Induction proves statements P(n) for all natural numbers n ≥ n₀.\n\nStep 1 (Base Case): Verify P(n₀) is true.\nStep 2 (Inductive Hypothesis): Assume P(k) is true for some arbitrary k ≥ n₀.\nStep 3 (Inductive Step): Using the assumption that P(k) is true, prove P(k+1) is true.\n\nIf both steps succeed, P(n) is true for all n ≥ n₀.\n\nStrong Induction: Instead of assuming only P(k), assume P(n₀), P(n₀+1), ..., P(k) are all true, then prove P(k+1).\n\nCommon applications: proving divisibility (e.g., 6 | n³ - n), inequality proofs (e.g., 2ⁿ > n² for n ≥ 5), summation formulas, and properties of recursive sequences.\n\nKey pitfall: the inductive step alone is insufficient. A base case is essential — without it, you can 'prove' false statements."
+    "explanation": "Core ideas:\nInduction proves statements for all integers from a base onward.\n1) Base case\n2) Inductive hypothesis\n3) Inductive step P(k) => P(k+1)\n\nStrong induction assumes truth for all values up to k, then proves k+1.\n\nProblem toolkit:\nUseful for divisibility, inequalities, summation identities, recursive formulas, and loop invariants. The base case is mandatory; without it, the chain has no starting anchor.\n\nReal-life usage:\nFormal verification and algorithm correctness proofs use induction extensively. Recursive data structures (trees, lists) and compiler proofs often rely on structural induction variants."
+  },
+  {
+    "id": "mathematical-reasoning",
+    "title": "Mathematical Reasoning",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nReasoning uses logic, implication, equivalence, quantifiers, and proof strategies.\nKey forms: direct proof, contrapositive, contradiction, case analysis, and counterexample-based disproof.\n\nStatements are built from connectives (and, or, not, implies). Quantifiers (for all, there exists) control scope and precision.\n\nProblem toolkit:\nTranslate language carefully into logical form, test edge cases, and avoid converse/inverse fallacies.\n\nReal-life usage:\nUsed in software specifications, SAT/SMT-based verification, digital circuit design (truth tables), legal/contract logic, and scientific argument structure."
   },
   {
     "id": "limits-continuity-differentiability",
-    "title": "Limits, Continuity and Differentiability",
+    "title": "Limits, Continuity, and Differentiability",
     "category": "Calculus",
-    "explanation": "Limit: lim(x→a) f(x) = L means f(x) approaches L as x approaches a. The limit exists iff left-hand limit equals right-hand limit.\n\nKey limits: lim(x→0) sin(x)/x = 1, lim(x→0) (eˣ-1)/x = 1, lim(x→0) (1+x)^(1/x) = e, lim(x→0) ln(1+x)/x = 1.\n\nL'Hôpital's Rule: for 0/0 or ∞/∞ forms, lim f(x)/g(x) = lim f'(x)/g'(x).\n\nContinuity at a point a: f(a) exists, lim(x→a) f(x) exists, and they're equal. Types of discontinuity: removable, jump, infinite.\n\nDifferentiability: f'(a) = lim(h→0) [f(a+h) - f(a)]/h. Differentiability implies continuity, but not vice versa (e.g., |x| at x=0 is continuous but not differentiable).\n\nDifferentiation rules: product rule (fg)' = f'g + fg', quotient rule (f/g)' = (f'g - fg')/g², chain rule (f∘g)' = f'(g(x))·g'(x)."
+    "explanation": "Core ideas:\nA limit studies function behavior near a point. Left and right limits must agree for a two-sided limit. Continuity at x=a requires (1) f(a) exists, (2) limit as x->a exists, (3) they are equal.\n\nDifferentiability is defined by f'(a) = lim_{h->0} [f(a+h)-f(a)]/h. Differentiable => continuous, but continuous does not always imply differentiable (for example, cusp/corner points).\n\nHigh-value limits and tools:\nlim_{x->0} sin x / x = 1, lim_{x->0} (e^x-1)/x = 1, lim_{x->0} ln(1+x)/x = 1. L'Hopital's rule can handle 0/0 and inf/inf forms when conditions hold.\n\nProblem toolkit:\nUse algebraic cleanup (factorization, rationalization), trig identities, squeeze arguments, and only then derivative-based methods. Always check domain restrictions.\n\nReal-life usage:\nLimits formalize edge behavior in simulation, continuity assumptions support stable numerical solvers, and differentiability enables gradient methods used in control, optimization, and machine learning."
   },
   {
     "id": "application-of-derivatives",
-    "title": "Application of Derivatives",
+    "title": "Applications of Derivatives",
     "category": "Calculus",
-    "explanation": "Rate of Change: if y = f(x), then dy/dx represents the rate of change of y with respect to x.\n\nTangent and Normal: at point (x₀, y₀), tangent slope = f'(x₀), normal slope = -1/f'(x₀).\n\nIncreasing/Decreasing: f is increasing on [a,b] if f'(x) > 0 for all x in (a,b), decreasing if f'(x) < 0.\n\nMaxima and Minima: First derivative test — if f' changes from + to - at c, local maximum; from - to +, local minimum. Second derivative test — if f'(c) = 0 and f''(c) < 0, local max; f''(c) > 0, local min.\n\nRolle's Theorem: if f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b), then ∃c ∈ (a,b) where f'(c) = 0.\n\nMean Value Theorem: if f is continuous on [a,b] and differentiable on (a,b), then ∃c ∈ (a,b) where f'(c) = (f(b) - f(a))/(b - a).\n\nApproximation: f(x + Δx) ≈ f(x) + f'(x)·Δx."
+    "explanation": "Core ideas:\nDerivative = instantaneous rate of change. Main themes: monotonicity, extrema, concavity, tangents/normals, related rates, and approximation.\n\nOptimization workflow:\n1) Define objective and constraints.\n2) Express objective in one variable if possible.\n3) Solve f'(x)=0, include boundary checks.\n4) Use sign/second-derivative tests and interpret units.\n\nUseful formulas:\nLinearization: f(x+dx) approx f(x)+f'(x)dx.\nRelative error estimate: d(ln y) approx dy/y.\nCurvature cue from second derivative and inflection checks.\n\nProblem toolkit:\nTranslate words to equations first, then differentiate. Keep track of physical constraints and feasible intervals.\n\nReal-life usage:\nUsed in engineering design optimization, economics (marginal cost/revenue/profit), operations planning, and sensitivity analysis in manufacturing and finance."
   },
   {
     "id": "integrals",
     "title": "Indefinite and Definite Integrals",
     "category": "Calculus",
-    "explanation": "Indefinite integral: ∫f(x)dx = F(x) + C where F'(x) = f(x).\n\nBasic formulas: ∫xⁿdx = xⁿ⁺¹/(n+1) + C, ∫eˣdx = eˣ + C, ∫sin(x)dx = -cos(x) + C, ∫1/x dx = ln|x| + C.\n\nTechniques: Substitution — if ∫f(g(x))g'(x)dx, let u = g(x). Integration by parts — ∫u dv = uv - ∫v du (LIATE rule for choosing u). Partial fractions — decompose rational functions.\n\nDefinite integral: ∫ₐᵇ f(x)dx = F(b) - F(a) (Fundamental Theorem of Calculus).\n\nProperties: ∫ₐᵇ f(x)dx = -∫ᵇₐ f(x)dx, ∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫ᶜᵇ f(x)dx.\n\nKing's property: ∫₀ᵃ f(x)dx = ∫₀ᵃ f(a-x)dx. For even functions: ∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx. For odd functions: ∫₋ₐᵃ f(x)dx = 0.\n\nApplications: area under curve, area between curves."
+    "explanation": "Core ideas:\nIndefinite integral gives antiderivatives; definite integral gives net accumulation. Fundamental Theorem of Calculus: int_a^b f(x)dx = F(b)-F(a), where F' = f.\n\nCore techniques:\nsubstitution, integration by parts, partial fractions, trig identities/substitutions, and symmetry for even/odd functions. Improper integrals handle infinite limits or singularities.\n\nUseful derived quantities:\nAverage value on [a,b]: (1/(b-a))int_a^b f(x)dx.\nAccumulated change: quantity(t2)-quantity(t1) = int_{t1}^{t2} rate(t)dt.\n\nProblem toolkit:\nClassify integrand structure before choosing technique. Verify antiderivatives by differentiation when possible.\n\nReal-life usage:\nDistance from velocity, energy from power, mass from density, cumulative probability from PDFs, and total cost/revenue over time all come from definite integrals."
+  },
+  {
+    "id": "area-under-curves",
+    "title": "Area under Curves",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nSigned area under y=f(x) from a to b is int_a^b f(x)dx. Geometric area is non-negative and may need interval splitting where sign/order changes.\n\nKey formulas:\nArea between curves (x integration): A = int_a^b [f(x)-g(x)]dx (top minus bottom).\nArea between curves (y integration): A = int_c^d [x_right(y)-x_left(y)]dy.\n\nNumerical estimation:\nTrapezoidal and Simpson-style rules are used when closed forms are unavailable.\n\nProblem toolkit:\nSketch first, find intersection points, split intervals where required, and treat absolute values carefully.\n\nReal-life usage:\nPharmacokinetics uses concentration-time AUC as a primary drug exposure metric in bioequivalence studies. ROC-AUC summarizes classifier discrimination in diagnostics/ML. Hydrology and signal processing use area as total load/energy interpretation."
   },
   {
     "id": "differential-equations",
     "title": "Differential Equations",
     "category": "Calculus",
-    "explanation": "A differential equation involves derivatives of an unknown function. Order = highest derivative, degree = power of highest derivative (when polynomial in derivatives).\n\nSeparable equations: dy/dx = f(x)g(y) → ∫dy/g(y) = ∫f(x)dx.\n\nHomogeneous equations: dy/dx = f(y/x). Substitute v = y/x, then y = vx, dy/dx = v + x·dv/dx.\n\nLinear first-order: dy/dx + P(x)y = Q(x). Integrating factor: μ = e^(∫P(x)dx). Solution: y·μ = ∫Q(x)·μ dx.\n\nBernoulli equation: dy/dx + P(x)y = Q(x)yⁿ. Substitute v = y^(1-n) to convert to linear.\n\nExact equations: M(x,y)dx + N(x,y)dy = 0 is exact if ∂M/∂y = ∂N/∂x.\n\nApplications: growth/decay (dN/dt = kN → N = N₀eᵏᵗ), cooling (dT/dt = -k(T-Tₛ)), circuits, mixing problems."
+    "explanation": "Core ideas:\nA differential equation links a function and its derivatives. Classification includes order, linearity, and homogeneous/non-homogeneous type.\n\nFirst-order methods:\nseparable form, linear form y' + P(x)y = Q(x) with integrating factor, and logistic growth dP/dt = rP(1-P/K).\n\nSecond-order linear form (constant coefficients) is central in oscillation and circuit models.\n\nProblem toolkit:\nIdentify equation type first, solve symbolically or numerically, then apply initial/boundary conditions. Validate units, signs, and long-time behavior (equilibrium/stability).\n\nReal-life usage:\nPopulation/epidemic dynamics, cooling/heating, RC/RL circuit response, vibration/motion models, and control systems all rely on differential equations as core modeling language."
   },
   {
-    "id": "straight-lines",
-    "title": "Straight Lines",
-    "category": "Coordinate Geometry",
-    "explanation": "A straight line in 2D can be represented in multiple forms:\n\nSlope-intercept: y = mx + c where m is slope, c is y-intercept.\nPoint-slope: y - y₁ = m(x - x₁).\nTwo-point: (y - y₁)/(y₂ - y₁) = (x - x₁)/(x₂ - x₁).\nIntercept: x/a + y/b = 1 where a, b are x and y intercepts.\nGeneral: ax + by + c = 0.\n\nSlope between two points: m = (y₂ - y₁)/(x₂ - x₁).\n\nParallel lines have equal slopes (m₁ = m₂). Perpendicular lines: m₁ · m₂ = -1.\n\nAngle between two lines: tan(θ) = |m₁ - m₂|/(1 + m₁m₂).\n\nDistance from point (x₁,y₁) to line ax + by + c = 0: d = |ax₁ + by₁ + c|/√(a² + b²).\n\nDistance between parallel lines ax + by + c₁ = 0 and ax + by + c₂ = 0: d = |c₁ - c₂|/√(a² + b²).\n\nFamily of lines: L₁ + λL₂ = 0 passes through the intersection of L₁ = 0 and L₂ = 0."
-  },
-  {
-    "id": "circles",
-    "title": "Circles",
-    "category": "Coordinate Geometry",
-    "explanation": "Standard form: (x - h)² + (y - k)² = r² with center (h,k) and radius r.\n\nGeneral form: x² + y² + 2gx + 2fy + c = 0 with center (-g, -f) and radius √(g² + f² - c).\n\nParametric: x = h + r·cosθ, y = k + r·sinθ.\n\nTangent to circle x² + y² = r² at point (x₁, y₁): xx₁ + yy₁ = r².\n\nCondition for tangency: line y = mx + c is tangent to x² + y² = r² when c² = r²(1 + m²).\n\nLength of tangent from external point (x₁, y₁) to circle: √(x₁² + y₁² + 2gx₁ + 2fy₁ + c).\n\nTwo circles: external tangent when d = r₁ + r₂, internal tangent when d = |r₁ - r₂|. Radical axis: S₁ - S₂ = 0 (locus of points with equal tangent lengths to both circles).\n\nPower of a point: PA · PB = |PT|² where T is tangent point."
-  },
-  {
-    "id": "conic-sections",
-    "title": "Conic Sections (Parabola, Ellipse, Hyperbola)",
-    "category": "Coordinate Geometry",
-    "explanation": "Conics are curves formed by intersecting a plane with a double cone. Eccentricity e determines the type.\n\nParabola (e = 1): y² = 4ax. Focus (a,0), directrix x = -a, vertex at origin. Tangent at (at², 2at): ty = x + at². Focal chord property: if endpoints are t₁, t₂ then t₁·t₂ = -1.\n\nEllipse (0 < e < 1): x²/a² + y²/b² = 1 (a > b). Foci (±ae, 0), eccentricity e = √(1 - b²/a²). Sum of distances from any point to foci = 2a. Tangent at (x₁,y₁): xx₁/a² + yy₁/b² = 1.\n\nHyperbola (e > 1): x²/a² - y²/b² = 1. Foci (±ae, 0), eccentricity e = √(1 + b²/a²). |difference of distances to foci| = 2a. Asymptotes: y = ±(b/a)x. Rectangular hyperbola: xy = c² (a = b, e = √2).\n\nGeneral second-degree equation: ax² + 2hxy + by² + 2gx + 2fy + c = 0. Discriminant Δ = abc + 2fgh - af² - bg² - ch² = 0 for degenerate conics."
-  },
-  {
-    "id": "3d-geometry",
-    "title": "Vectors and 3D Space",
-    "category": "Three-Dimensional Geometry",
-    "explanation": "In 3D space, a point is P(x, y, z). Distance between P₁(x₁,y₁,z₁) and P₂(x₂,y₂,z₂): d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).\n\nDirection cosines: l = cosα, m = cosβ, n = cosγ where α, β, γ are angles with x, y, z axes. Always l² + m² + n² = 1.\n\nEquation of a line: (x-x₁)/a = (y-y₁)/b = (z-z₁)/c (symmetric form) or r⃗ = a⃗ + λb⃗ (vector form).\n\nAngle between two lines: cosθ = |l₁l₂ + m₁m₂ + n₁n₂| or cosθ = |a⃗·b⃗|/(|a⃗||b⃗|).\n\nEquation of a plane: ax + by + cz + d = 0 or r⃗·n⃗ = d. Normal to plane: (a, b, c).\n\nDistance from point to plane: |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).\n\nSkew lines: two lines that are neither parallel nor intersecting. Shortest distance between skew lines r⃗ = a⃗₁ + λb⃗₁ and r⃗ = a⃗₂ + μb⃗₂ is |(a⃗₂ - a⃗₁)·(b⃗₁ × b⃗₂)|/|b⃗₁ × b⃗₂|."
-  },
-  {
-    "id": "vector-algebra",
-    "title": "Vector Operations, Scalar and Vector Products",
-    "category": "Vector Algebra",
-    "explanation": "A vector has magnitude and direction: a⃗ = aₓî + aᵧĵ + a_zk̂. Magnitude: |a⃗| = √(aₓ² + aᵧ² + a_z²). Unit vector: â = a⃗/|a⃗|.\n\nVector addition: parallelogram law, triangle law. Properties: commutative, associative.\n\nScalar (dot) product: a⃗·b⃗ = |a⃗||b⃗|cosθ = aₓbₓ + aᵧbᵧ + a_zb_z. Properties: commutative, distributive. a⃗·b⃗ = 0 iff perpendicular.\n\nVector (cross) product: a⃗ × b⃗ = |a⃗||b⃗|sinθ n̂ (right-hand rule). Computed as determinant: |î ĵ k̂; aₓ aᵧ a_z; bₓ bᵧ b_z|. Properties: anti-commutative (a⃗×b⃗ = -b⃗×a⃗), |a⃗×b⃗| = area of parallelogram.\n\nScalar triple product: [a⃗ b⃗ c⃗] = a⃗·(b⃗×c⃗) = volume of parallelepiped. Zero iff vectors are coplanar.\n\nVector triple product: a⃗×(b⃗×c⃗) = (a⃗·c⃗)b⃗ - (a⃗·b⃗)c⃗ (BAC-CAB rule).\n\nProjection of a⃗ on b⃗: (a⃗·b⃗)/|b⃗|. Component: (a⃗·b̂)b̂."
-  },
-  {
-    "id": "statistics-probability",
-    "title": "Measures of Dispersion and Probability Distributions",
-    "category": "Statistics and Probability",
-    "explanation": "Measures of Central Tendency: Mean (x̄ = Σxᵢ/n), Median (middle value), Mode (most frequent).\n\nMeasures of Dispersion: Range = max - min. Variance σ² = Σ(xᵢ - x̄)²/n. Standard deviation σ = √(variance). Shortcut: σ² = (Σxᵢ²/n) - x̄².\n\nProbability: P(E) = favorable outcomes / total outcomes. 0 ≤ P(E) ≤ 1. P(E') = 1 - P(E).\n\nAddition rule: P(A∪B) = P(A) + P(B) - P(A∩B). For mutually exclusive: P(A∪B) = P(A) + P(B).\n\nConditional probability: P(A|B) = P(A∩B)/P(B). Independent events: P(A∩B) = P(A)·P(B).\n\nBayes' Theorem: P(Aᵢ|B) = P(B|Aᵢ)P(Aᵢ) / ΣP(B|Aⱼ)P(Aⱼ).\n\nBinomial distribution: P(X=r) = C(n,r)pʳ(1-p)ⁿ⁻ʳ. Mean = np, Variance = np(1-p).\n\nRandom variable: E(X) = Σxᵢpᵢ, Var(X) = E(X²) - [E(X)]²."
-  },
-  {
-    "id": "trigonometric-ratios-identities",
-    "title": "Trigonometric Ratios and Identities",
-    "category": "Trigonometry",
-    "explanation": "Six ratios: sinθ = opposite/hypotenuse, cosθ = adjacent/hypotenuse, tanθ = sin/cos, cotθ = cos/sin, secθ = 1/cos, cscθ = 1/sin.\n\nPythagorean identities: sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = csc²θ.\n\nSum/Difference formulas: sin(A±B) = sinAcosB ± cosAsinB, cos(A±B) = cosAcosB ∓ sinAsinB, tan(A±B) = (tanA ± tanB)/(1 ∓ tanAtanB).\n\nDouble angle: sin2A = 2sinAcosA, cos2A = cos²A - sin²A = 2cos²A - 1 = 1 - 2sin²A, tan2A = 2tanA/(1 - tan²A).\n\nHalf angle: sin(A/2) = ±√((1-cosA)/2), cos(A/2) = ±√((1+cosA)/2).\n\nProduct-to-sum: 2sinAcosB = sin(A+B) + sin(A-B). Sum-to-product: sinC + sinD = 2sin((C+D)/2)cos((C-D)/2).\n\nValues: sin0°=0, sin30°=1/2, sin45°=√2/2, sin60°=√3/2, sin90°=1."
-  },
-  {
-    "id": "trigonometric-equations",
-    "title": "Trigonometric Equations and Inverse Functions",
-    "category": "Trigonometry",
-    "explanation": "General solutions:\nsinθ = sinα → θ = nπ + (-1)ⁿα\ncosθ = cosα → θ = 2nπ ± α\ntanθ = tanα → θ = nπ + α\nwhere n is any integer.\n\nInverse trigonometric functions (principal values):\nsin⁻¹x: domain [-1,1], range [-π/2, π/2]\ncos⁻¹x: domain [-1,1], range [0, π]\ntan⁻¹x: domain ℝ, range (-π/2, π/2)\n\nKey identities:\nsin⁻¹x + cos⁻¹x = π/2\ntan⁻¹x + cot⁻¹x = π/2\ntan⁻¹x + tan⁻¹y = tan⁻¹((x+y)/(1-xy)) when xy < 1\n2tan⁻¹x = sin⁻¹(2x/(1+x²)) = cos⁻¹((1-x²)/(1+x²))\n\nsin⁻¹(sinx) = x only when x ∈ [-π/2, π/2]. Outside this range, use periodicity and symmetry.\n\nHeights and distances: use sinθ, cosθ, tanθ to find unknown heights, distances, and angles in triangles. Sine rule: a/sinA = b/sinB = c/sinC = 2R. Cosine rule: c² = a² + b² - 2ab·cosC."
+    "id": "calculus-modeling-optimization",
+    "title": "Calculus Modeling and Optimization (Advanced)",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nPractical modeling combines derivatives, integrals, and differential equations in one loop: model -> estimate -> optimize -> validate.\n\nAdvanced tools:\nmultivariable gradients, Jacobian/Hessian interpretation, constrained optimization ideas, numerical solvers, and sensitivity/uncertainty analysis.\n\nWorkflow used in practice:\n1) Define measurable objective and constraints.\n2) Build mechanistic or data-informed model.\n3) Calibrate parameters to observed data.\n4) Optimize under safety/cost/performance limits.\n\nReal-life usage:\nFlight and orbit dynamics use systems of differential equations. Industrial process control uses calculus to maintain stability and throughput. AI training relies on gradient-based optimization over high-dimensional objective functions."
   },
   {
     "id": "rectangular-coordinates",
     "title": "Cartesian System of Rectangular Coordinates",
     "category": "Coordinate Geometry",
-    "explanation": "The Cartesian plane is formed by two perpendicular number lines: the x-axis (horizontal) and y-axis (vertical), intersecting at the origin O(0,0).\n\nFour quadrants: Q1 (+,+), Q2 (-,+), Q3 (-,-), Q4 (+,-).\n\nDistance formula: d = √((x₂-x₁)² + (y₂-y₁)²).\n\nSection formula: point dividing line segment joining (x₁,y₁) and (x₂,y₂) in ratio m:n internally = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). Externally: replace + with -.\n\nMidpoint: ((x₁+x₂)/2, (y₁+y₂)/2).\n\nCentroid of triangle: ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3).\n\nArea of triangle with vertices (x₁,y₁), (x₂,y₂), (x₃,y₃) = ½|x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|.\n\nCollinearity: three points are collinear if the area of the triangle they form is 0.\n\nLocus: the set of all points satisfying a given geometric condition. To find the locus, let the moving point be (h,k), apply the condition, then replace h with x and k with y."
+    "explanation": "Core ideas:\nThe plane uses orthogonal axes with points (x,y). Core tools: distance formula, midpoint, section formula, area of triangle by coordinates, and centroid.\n\nGeometric conditions (collinearity, perpendicularity, parallelism) can be tested algebraically using slopes or area/determinant forms.\n\nProblem toolkit:\nConvert geometry into equations early; use vector or slope form consistently.\n\nReal-life usage:\nBase framework for CAD drawings, map layouts, robotics workspace planning, and computer vision coordinate transforms."
+  },
+  {
+    "id": "straight-lines",
+    "title": "Straight Lines",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nLine forms: slope-intercept, point-slope, two-point, intercept, and general ax + by + c = 0.\n\nKey results:\nslope m = (y2-y1)/(x2-x1),\nparallel lines have equal slopes,\nperpendicular lines satisfy m1*m2 = -1 (when finite).\n\nDistance from point to line and angle between lines are standard high-frequency tools.\n\nProblem toolkit:\nChoose form based on given data (point+slope, two points, or intercepts).\n\nReal-life usage:\nUsed in linear trend modeling, road/rail alignment, camera calibration, and path planning in 2D navigation."
+  },
+  {
+    "id": "pair-of-straight-lines",
+    "title": "Pair of Straight Lines",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nA second-degree equation can represent two lines (intersecting, parallel, or coincident) under specific coefficient conditions.\n\nFor homogeneous form ax^2 + 2hxy + by^2 = 0, the pair passes through origin and line slopes m satisfy bm^2 + 2hm + a = 0.\n\nAngle between lines can be derived from slopes. Condition for perpendicular pair (through origin): a + b = 0.\n\nProblem toolkit:\nFactorize the quadratic where possible, or use discriminant/slope equations to classify the pair.\n\nReal-life usage:\nIntersection modeling for crossing beams/roads, line-detection geometry in image processing, and analytical decomposition in CAD geometry engines."
+  },
+  {
+    "id": "circles",
+    "title": "Circle",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nStandard form: (x-h)^2 + (y-k)^2 = r^2. General form identifies center and radius after completing square.\n\nImportant constructs:\ntangent, normal, chord, pole-polar, radical axis, and family of circles.\n\nProblem toolkit:\nTranslate each condition (touching, passing through, tangent from point) into algebraic equations and solve parameterically.\n\nReal-life usage:\nCoverage zones in wireless networks, geofencing on maps, robotics turning radius constraints, and circular fitting in manufacturing metrology."
+  },
+  {
+    "id": "conic-sections",
+    "title": "Conic Sections (Circle, Parabola, Ellipse, Hyperbola)",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nConics are unified by eccentricity e:\nCircle e=0, Parabola e=1, Ellipse 0<e<1, Hyperbola e>1.\n\nParabola models focus-directrix equality. Ellipse has constant sum of distances to two foci. Hyperbola has constant absolute difference of distances to two foci.\n\nProblem toolkit:\nUse standard forms, shifts/rotations, and tangent-normal formulas. Convert general quadratic by completing square and axis alignment when needed.\n\nReal-life usage:\nPlanetary and satellite orbits are elliptical in first-order models. Parabolic reflectors are used in communication/radio dishes. Hyperbolic geometry appears in time-difference localization and certain navigation/signal systems."
+  },
+  {
+    "id": "3d-geometry",
+    "title": "Coordinates and Lines in 3D Space",
+    "category": "Three-Dimensional Geometry",
+    "explanation": "Core ideas:\nA point is (x,y,z). A line is represented parametrically or in symmetric form. A plane is ax + by + cz + d = 0.\n\nKey computations:\ndistance between points, angle between lines/planes, point-to-plane distance, shortest distance between skew lines.\n\nProblem toolkit:\nUse vector form for clarity, then switch to scalar equations for solving unknown parameters.\n\nReal-life usage:\nGPS positioning and trilateration, drone/autonomous navigation, 3D game engines, and satellite imaging geolocation all depend on 3D coordinate geometry."
+  },
+  {
+    "id": "vector-algebra",
+    "title": "Vector Operations and Applications",
+    "category": "Vector Algebra",
+    "explanation": "Core ideas:\nVectors represent magnitude and direction. Core operations: addition, scalar multiplication, dot product, cross product, scalar triple product, vector triple product.\n\nDot product measures directional alignment; cross product gives perpendicular direction and area magnitude; triple product gives volume and coplanarity tests.\n\nProblem toolkit:\nResolve vectors into components, use unit vectors, project onto directions/planes, and check orthogonality via dot product = 0.\n\nReal-life usage:\nUsed in force decomposition, torque and moment calculation, graphics lighting (normals), rigid-body simulation, robotics kinematics, and navigation."
+  },
+  {
+    "id": "trigonometric-ratios-identities",
+    "title": "Trigonometric Functions, Identities, and Equations",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nTrig functions are defined on the unit circle and are periodic. Core identities include Pythagorean, angle sum/difference, double-angle, half-angle, and product-sum conversions.\n\nEquations are solved by reducing to standard forms and applying periodic general solutions.\n\nProblem toolkit:\nStandardize angle units, simplify with identities, isolate one trig function, and then apply principal value + periodicity.\n\nReal-life usage:\nWave modeling (sound/light), AC power analysis, phase synchronization, navigation bearings, and 2D/3D rotational transforms in graphics."
+  },
+  {
+    "id": "trigonometric-equations",
+    "title": "Trigonometric Equations",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nGeneral solutions:\nsin x = sin a => x = n*pi + (-1)^n a\ncos x = cos a => x = 2n*pi +/- a\ntan x = tan a => x = n*pi + a\nfor n in integers.\n\nProblem toolkit:\nTransform compound equations using identities, reduce to polynomial in one trig function where possible, then generate all solutions in the requested interval.\n\nReal-life usage:\nSignal phase matching, periodic scheduling, wave-interference conditions, and resonance analysis."
+  },
+  {
+    "id": "inverse-trigonometric-functions",
+    "title": "Inverse Trigonometric Functions",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nInverse trig functions return principal angles over restricted ranges:\narcsin x in [-pi/2, pi/2], arccos x in [0, pi], arctan x in (-pi/2, pi/2).\n\nKey identities:\narcsin x + arccos x = pi/2,\natan x + acot x = pi/2 (principal branches).\n\nProblem toolkit:\nRespect domain/range restrictions and use triangle or substitution methods for simplification and differentiation/integration links.\n\nReal-life usage:\nAngle reconstruction from measured ratios in surveying, robotics joint-angle estimation, and signal phase retrieval from sine/cosine components."
+  },
+  {
+    "id": "statistics-probability",
+    "title": "Measures of Dispersion and Probability (Core)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nDispersion measures spread: range, variance, standard deviation, and coefficient of variation. Probability basics include events, complement, addition, multiplication, conditional probability, and independence.\n\nRandom variables summarize uncertainty with expectation and variance. For discrete X:\nE[X] = sum x p(x), Var(X)=E[X^2]-E[X]^2.\n\nProblem toolkit:\nDefine sample space/events clearly, identify whether events are independent or mutually exclusive, then apply the correct rule set.\n\nReal-life usage:\nThese tools underpin quality control, risk scoring, reliability planning, weather uncertainty communication, and insurance pricing."
+  },
+  {
+    "id": "measures-of-dispersion",
+    "title": "Measures of Dispersion (Mean, Variance, Standard Deviation)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nMean describes central location; variance and standard deviation quantify spread around center.\nPopulation variance: sigma^2 = sum (x_i-mu)^2 / N.\nSample variance: s^2 = sum (x_i-x_bar)^2 / (n-1).\nCoefficient of variation: CV = (SD/mean)*100 percent.\n\nInterpretation:\nLow spread often indicates process consistency; high spread indicates volatility/uncertainty.\n\nProblem toolkit:\nUse grouped-data formulas when needed, watch units, and normalize via CV when comparing datasets on different scales.\n\nReal-life usage:\nManufacturing capability monitoring, financial volatility tracking, exam analytics, biomarker variability studies, and anomaly detection pipelines."
+  },
+  {
+    "id": "conditional-probability-and-bayes",
+    "title": "Conditional Probability and Bayes' Theorem",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nConditional probability: P(A|B) = P(A and B)/P(B), where P(B)>0.\nBayes theorem:\nP(A_i|B) = [P(B|A_i)P(A_i)] / sum_j P(B|A_j)P(A_j).\n\nDiagnostic form (binary case):\nIf prevalence = p, sensitivity = Se, specificity = Sp,\nPPV = (Se*p) / (Se*p + (1-Sp)*(1-p)).\n\nProblem toolkit:\nWrite priors, likelihoods, and total evidence explicitly before substitution; trees/tables reduce mistakes.\n\nReal-life usage:\nMedical post-test probability, fraud/spam detection, fault diagnosis, and adaptive clinical trial decision-making are classic Bayes applications."
+  },
+  {
+    "id": "bernoulli-binomial-models",
+    "title": "Bernoulli Trials and Binomial Models",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nBernoulli trial: two outcomes with success probability p. If X counts successes in n independent trials, X ~ Binomial(n,p).\n\nPMF:\nP(X=r) = C(n,r)p^r(1-p)^(n-r), r=0..n.\nMean=np, Variance=np(1-p).\n\nApproximations:\nNormal approximation can be used for large n with suitable np and n(1-p).\nPoisson approximation can be useful when n is large and p is small.\n\nProblem toolkit:\nCheck assumptions carefully: fixed n, independent trials, constant p, binary outcome.\n\nReal-life usage:\nA/B conversion analysis, defect-count modeling, pass/fail quality checks, and reliability trial planning."
+  },
+  {
+    "id": "probability-modeling-inference",
+    "title": "Probability Modeling and Inference (Advanced)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nAdvanced probability integrates model choice, parameter estimation, uncertainty quantification, and decisions under loss.\n\nUseful themes:\nlikelihoods, posterior updates, calibration, expected utility/risk, and model diagnostics.\n\nPractical workflow:\n1) Specify data-generating assumptions.\n2) Estimate parameters and uncertainty.\n3) Validate fit and calibration.\n4) Make decision with explicit risk trade-offs.\n\nReal-life usage:\nWeather services express probability of precipitation as chance of measurable precipitation (at least 0.01 inch) at a point over a forecast period. Healthcare/regulatory contexts use Bayesian and frequentist inference for evidence-weighted decisions in trials and safety monitoring. Product teams use probabilistic experimentation to prioritize releases."
   }
 ]

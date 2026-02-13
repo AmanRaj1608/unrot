@@ -9,7 +9,8 @@
   "dependencies": {
     "elysia": "^1.2.0",
     "@elysiajs/cors": "^1.2.0",
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "ioredis": "^5.4.1"
   },
   "devDependencies": {
     "@types/bun": "latest"

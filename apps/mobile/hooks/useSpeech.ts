@@ -1,14 +1,24 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import * as Speech from "expo-speech";
+import { setAudioModeAsync } from "expo-audio";
+import { useSpeechSettings } from "../lib/SpeechContext";
 
 export function useSpeech() {
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const audioConfigured = useRef(false);
+  const { settings } = useSpeechSettings();
 
-  const speak = useCallback((text: string) => {
+  const speak = useCallback(async (text: string) => {
+    if (!audioConfigured.current) {
+      await setAudioModeAsync({ playsInSilentMode: true });
+      audioConfigured.current = true;
+    }
     Speech.stop();
     Speech.speak(text, {
       language: "en-US",
-      rate: 0.9,
+      rate: settings.rate,
+      pitch: settings.pitch,
+      ...(settings.voiceIdentifier ? { voice: settings.voiceIdentifier } : {}),
       onStart: () => setIsSpeaking(true),
       onDone: () => setIsSpeaking(false),
       onStopped: () => setIsSpeaking(false),
@@ -17,7 +27,7 @@ export function useSpeech() {
         setIsSpeaking(false);
       },
     });
-  }, []);
+  }, [settings]);
 
   const stop = useCallback(() => {
     Speech.stop();

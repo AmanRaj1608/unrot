@@ -24,6 +24,26 @@ async function get<T>(path: string): Promise<T> {
   return res.json();
 }
 
+async function post<T>(path: string, body?: unknown): Promise<T> {
+  const res = await fetch(`${BASE_URL}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) {
+    throw new Error(`API error: ${res.status}`);
+  }
+  return res.json();
+}
+
+async function del<T>(path: string): Promise<T> {
+  const res = await fetch(`${BASE_URL}${path}`, { method: "DELETE" });
+  if (!res.ok) {
+    throw new Error(`API error: ${res.status}`);
+  }
+  return res.json();
+}
+
 export interface Book {
   id: string;
   title: string;
@@ -61,6 +81,22 @@ export interface PullRequest {
   htmlUrl: string;
 }
 
+export interface FeedItem {
+  type: "news" | "github";
+  id: string;
+  viewed: boolean;
+  title: string;
+  url?: string;
+  summary?: string;
+  section?: string;
+  readTime?: number;
+  number?: number;
+  author?: string;
+  state?: string;
+  htmlUrl?: string;
+  repoFullName?: string;
+}
+
 export const api = {
   books: {
     list: (category?: string) =>
@@ -81,5 +117,21 @@ export const api = {
   github: {
     pulls: (owner: string, repo: string) =>
       get<PullRequest[]>(`/github/repos/${owner}/${repo}/pulls`),
+  },
+  feed: {
+    get: (userId: string) => get<FeedItem[]>(`/feed?userId=${userId}`),
+    refresh: () => post<{ added: number }>("/feed/refresh"),
+    markViewed: (userId: string, itemId: string) =>
+      post<{ ok: true }>("/feed/viewed", { userId, itemId }),
+    repos: {
+      list: () => get<string[]>("/feed/repos"),
+      add: (owner: string, repo: string) =>
+        post<{ ok: true }>("/feed/repos", { owner, repo }),
+      remove: (owner: string, repo: string) =>
+        del<{ ok: true }>(`/feed/repos/${owner}/${repo}`),
+    },
+  },
+  catchup: {
+    get: (date: string) => get<Article[]>(`/catchup/${date}`),
   },
 };
