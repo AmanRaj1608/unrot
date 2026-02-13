@@ -1,0 +1,16 @@
+node_modules/
+.expo/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+
+# Expo
+ios/
+android/
+
+# Bun
+bun.lockb
+
+# Context dir
+.context/

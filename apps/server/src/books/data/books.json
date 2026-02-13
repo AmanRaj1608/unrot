@@ -1,0 +1,267 @@
+[
+  {
+    "id": "atomic-habits",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0735211299-L.jpg",
+    "category": "habits",
+    "summary": "Atomic Habits reveals how tiny changes in behavior can lead to remarkable results over time. James Clear argues that habits are the compound interest of self-improvement — getting 1% better every day counts for a lot in the long run. The book introduces a practical framework built around four laws of behavior change: make it obvious, make it attractive, make it easy, and make it satisfying. Clear explains that we don't rise to the level of our goals; we fall to the level of our systems. By focusing on systems rather than goals, and on identity rather than outcomes, anyone can build good habits and break bad ones.",
+    "keyTakeaways": [
+      "Habits are the compound interest of self-improvement. Getting 1% better every day yields massive results over time.",
+      "Focus on identity-based habits: instead of 'I want to run a marathon,' think 'I am a runner.'",
+      "The Four Laws of Behavior Change: Make it Obvious, Make it Attractive, Make it Easy, Make it Satisfying.",
+      "Environment design matters more than motivation. Make good habits the path of least resistance.",
+      "Never miss twice. Missing once is an accident; missing twice is the start of a new habit.",
+      "Habit stacking: link a new habit to an existing one — 'After I pour my morning coffee, I will meditate for one minute.'"
+    ]
+  },
+  {
+    "id": "power-of-habit",
+    "title": "The Power of Habit",
+    "author": "Charles Duhigg",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/081298160X-L.jpg",
+    "category": "habits",
+    "summary": "Charles Duhigg explores the science behind why habits exist and how they can be changed. He introduces the habit loop — cue, routine, reward — and shows how understanding this loop is the key to exercising regularly, losing weight, being more productive, and achieving success. The book examines habits at three levels: individual habits, organizational habits, and societal habits. Through compelling stories from Alcoa's CEO to Starbucks baristas to the civil rights movement, Duhigg demonstrates that by understanding how habits work, we can transform our lives, businesses, and communities.",
+    "keyTakeaways": [
+      "Every habit follows a loop: Cue → Routine → Reward. To change a habit, keep the cue and reward but change the routine.",
+      "Keystone habits trigger cascading positive changes. Exercise is a classic keystone habit that improves diet, productivity, and mood.",
+      "Willpower is a muscle that gets fatigued. Design your environment so you don't need willpower.",
+      "Belief is essential for lasting habit change. Community and shared experience strengthen belief.",
+      "Organizations have habits too. Changing one key organizational habit can transform an entire company."
+    ]
+  },
+  {
+    "id": "tiny-habits",
+    "title": "Tiny Habits",
+    "author": "BJ Fogg",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0358003326-L.jpg",
+    "category": "habits",
+    "summary": "Stanford behavior scientist BJ Fogg presents his breakthrough method for creating habits that stick. His approach centers on starting incredibly small — so small that the behavior requires almost no motivation. Instead of '30 minutes of exercise,' start with 'two push-ups after I go to the bathroom.' Fogg's Behavior Model (B=MAP) states that behavior happens when Motivation, Ability, and a Prompt converge. By making behaviors tiny, you lower the ability threshold so much that even minimal motivation is enough. The key insight: emotions create habits, not repetition. Celebrate immediately after each tiny behavior to wire it into your brain.",
+    "keyTakeaways": [
+      "Start incredibly small. 'Floss one tooth' is better than 'floss every day.' Tiny is sustainable.",
+      "B=MAP: Behavior happens when Motivation, Ability, and Prompt come together at the same moment.",
+      "Emotions create habits, not repetition. Celebrate immediately after the behavior to feel good and wire it in.",
+      "Anchor new habits to existing routines: 'After I [existing habit], I will [tiny new habit].'",
+      "Scale up naturally. Once the tiny habit is automatic, let it grow organically."
+    ]
+  },
+  {
+    "id": "think-and-grow-rich",
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1585424331-L.jpg",
+    "category": "personal-growth",
+    "summary": "Based on 20 years of research and interviews with over 500 of the most successful people of his era (including Andrew Carnegie, Henry Ford, and Thomas Edison), Napoleon Hill distills the principles of personal achievement. The book presents 13 steps to riches, arguing that success begins with a burning desire, a definite purpose, and unwavering faith. Hill emphasizes that thoughts are things — when mixed with definiteness of purpose, persistence, and a burning desire, they can translate into material wealth. The book also explores the concept of the Master Mind — the coordination of knowledge and effort between two or more people for a definite purpose.",
+    "keyTakeaways": [
+      "Desire is the starting point of all achievement. A burning, obsessive desire — not a mere wish — is required.",
+      "Faith is the head chemist of the mind. Repeated affirmation of orders to the subconscious mind develops faith.",
+      "The Master Mind principle: surround yourself with people who complement your weaknesses and share your vision.",
+      "Persistence is essential. Most people quit just when they're about to succeed.",
+      "Every adversity carries within it the seed of an equivalent or greater benefit.",
+      "A definite plan, backed by a burning desire, with persistent action — this combination is unstoppable."
+    ]
+  },
+  {
+    "id": "mindset",
+    "title": "Mindset: The New Psychology of Success",
+    "author": "Carol S. Dweck",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0345472322-L.jpg",
+    "category": "personal-growth",
+    "summary": "Stanford psychologist Carol Dweck reveals how our beliefs about our abilities profoundly affect every aspect of our lives. She identifies two mindsets: fixed (believing talents are innate) and growth (believing abilities can be developed through effort). People with a fixed mindset avoid challenges, give up easily, and see effort as pointless. Those with a growth mindset embrace challenges, persist through setbacks, and see effort as the path to mastery. Dweck shows how these mindsets form, their consequences in school, business, sports, and relationships, and how anyone can shift from a fixed to a growth mindset.",
+    "keyTakeaways": [
+      "Fixed mindset: intelligence and talent are static. Growth mindset: they can be developed through dedication and hard work.",
+      "Praising effort, strategy, and progress — not talent or intelligence — builds a growth mindset.",
+      "In a growth mindset, failure is not evidence of unintelligence but a springboard for growth.",
+      "The word 'yet' is powerful: 'I don't understand it yet' vs 'I don't understand it.'",
+      "Mindset affects relationships: growth-minded people believe relationships require effort and work through difficulties."
+    ]
+  },
+  {
+    "id": "7-habits",
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0743269519-L.jpg",
+    "category": "personal-growth",
+    "summary": "Stephen Covey presents a principle-centered approach for solving personal and professional problems. The seven habits move you from dependence to independence to interdependence. The first three habits (Be Proactive, Begin with the End in Mind, Put First Things First) focus on self-mastery. The next three (Think Win-Win, Seek First to Understand Then to Be Understood, Synergize) focus on teamwork and communication. The seventh habit (Sharpen the Saw) is about continuous self-renewal. Covey argues that effectiveness comes from aligning yourself with timeless principles like fairness, integrity, and honesty, rather than with quick-fix techniques.",
+    "keyTakeaways": [
+      "Be Proactive: focus on what you can control (Circle of Influence), not what you can't (Circle of Concern).",
+      "Begin with the End in Mind: define your personal mission statement. Envision what you want before you begin.",
+      "Put First Things First: focus on important-but-not-urgent tasks (Quadrant II) — planning, prevention, relationship building.",
+      "Think Win-Win: seek mutually beneficial solutions. If win-win isn't possible, agree to no deal.",
+      "Seek First to Understand, Then to Be Understood: practice empathic listening before offering your perspective.",
+      "Sharpen the Saw: renew yourself regularly in four dimensions — physical, mental, social/emotional, and spiritual."
+    ]
+  },
+  {
+    "id": "five-love-languages",
+    "title": "The 5 Love Languages",
+    "author": "Gary Chapman",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0802412726-L.jpg",
+    "category": "love-relationships",
+    "summary": "Marriage counselor Gary Chapman presents the concept that people express and experience love in five distinct ways: Words of Affirmation, Quality Time, Receiving Gifts, Acts of Service, and Physical Touch. Each person has a primary love language — the way they most deeply feel loved. Relationship problems often arise when partners speak different love languages: one partner may show love through acts of service while the other craves words of affirmation. By identifying your own and your partner's primary love language, you can communicate love more effectively and build a stronger, more fulfilling relationship.",
+    "keyTakeaways": [
+      "The five love languages: Words of Affirmation, Quality Time, Receiving Gifts, Acts of Service, Physical Touch.",
+      "Your love language is usually the way you naturally express love to others.",
+      "Love tanks: everyone has an emotional love tank. When it's full, relationships thrive; when empty, they struggle.",
+      "Speaking your partner's love language (not yours) is the key to making them feel truly loved.",
+      "Love is a choice and an action, not just a feeling. The 'in-love' phase fades; real love is intentional."
+    ]
+  },
+  {
+    "id": "attached",
+    "title": "Attached",
+    "author": "Amir Levine & Rachel Heller",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1585429139-L.jpg",
+    "category": "love-relationships",
+    "summary": "Psychiatrist Amir Levine and psychologist Rachel Heller apply attachment theory to adult romantic relationships. They identify three attachment styles: Secure (comfortable with intimacy and independence), Anxious (crave closeness, fear abandonment), and Avoidant (value independence, uncomfortable with closeness). The book explains how these styles — formed in childhood — shape our relationship behaviors, why anxious and avoidant types are magnetically attracted to each other (creating a toxic cycle), and how understanding your attachment style can help you choose better partners and build healthier relationships.",
+    "keyTakeaways": [
+      "Three attachment styles: Secure, Anxious, and Avoidant. Most people are one of these.",
+      "Anxious + Avoidant pairings create an anxious-avoidant trap: one pursues, the other withdraws, both suffer.",
+      "Secure partners make everyone more secure. Seek secure or work toward earned security.",
+      "Effective communication means stating your needs clearly without blame or criticism.",
+      "Your attachment style is not a flaw — it's an adaptation. Understanding it gives you power to change patterns."
+    ]
+  },
+  {
+    "id": "men-are-from-mars",
+    "title": "Men Are from Mars, Women Are from Venus",
+    "author": "John Gray",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0060574216-L.jpg",
+    "category": "love-relationships",
+    "summary": "John Gray explores the fundamental differences between men and women in communication, emotional needs, and behavior. Using the metaphor of men being from Mars and women from Venus, he explains why misunderstandings arise: men retreat to their 'caves' when stressed while women want to talk, men offer solutions when women want empathy, women keep score differently than men. The book provides practical advice for bridging these gaps through understanding, acceptance, and improved communication techniques that honor both partners' natural tendencies.",
+    "keyTakeaways": [
+      "Men go to their 'cave' to process stress; women talk to process. Both are valid — don't take it personally.",
+      "Men offer solutions; women often want empathy first. Ask: 'Do you want advice or do you want me to listen?'",
+      "Men are motivated when they feel needed; women when they feel cherished.",
+      "Love letters: write out your anger, sadness, fear, regret, and love — in that order — to process difficult emotions.",
+      "Understanding differences isn't about stereotyping — it's about building bridges of empathy."
+    ]
+  },
+  {
+    "id": "how-to-win-friends",
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0671027034-L.jpg",
+    "category": "conversation-skills",
+    "summary": "Dale Carnegie's timeless classic on interpersonal skills provides principles for making people like you, winning others to your way of thinking, and changing people without arousing resentment. The core insight: people crave feeling important. By showing genuine interest in others, remembering names, listening actively, and talking in terms of the other person's interests, you become someone people naturally want to be around. Carnegie argues that you can change other people's behavior by changing your own — through appreciation rather than criticism, encouragement rather than condemnation.",
+    "keyTakeaways": [
+      "Don't criticize, condemn, or complain. Criticism puts people on the defensive and rarely changes behavior.",
+      "Give honest, sincere appreciation. People crave feeling important — make them feel valued.",
+      "Become genuinely interested in other people. Ask about them, their lives, their passions.",
+      "Remember that a person's name is the sweetest sound to them. Use it.",
+      "Be a good listener. Encourage others to talk about themselves.",
+      "Talk in terms of the other person's interests. Find common ground."
+    ]
+  },
+  {
+    "id": "crucial-conversations",
+    "title": "Crucial Conversations",
+    "author": "Kerry Patterson, Joseph Grenny, Ron McMillan & Al Switzler",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0071771328-L.jpg",
+    "category": "conversation-skills",
+    "summary": "A crucial conversation is one where stakes are high, opinions vary, and emotions run strong. Most people either avoid these conversations or handle them poorly, leading to damaged relationships and missed opportunities. The authors present tools for navigating these high-stakes discussions effectively: creating safety so all parties can speak honestly, mastering your stories (the narratives you tell yourself), and moving from dialogue to action. The key skill is maintaining dialogue — keeping the flow of meaning between people open — even when things get heated.",
+    "keyTakeaways": [
+      "When you feel angry or defensive, ask yourself: 'What do I really want for myself, the other person, and the relationship?'",
+      "Create safety first. People don't get defensive about the content — they get defensive because they don't feel safe.",
+      "Master your stories: separate facts from the stories you tell yourself about those facts.",
+      "STATE your path: Share facts, Tell your story, Ask for others' paths, Talk tentatively, Encourage testing.",
+      "Move to action: clarify who does what by when, and follow up."
+    ]
+  },
+  {
+    "id": "never-split-difference",
+    "title": "Never Split the Difference",
+    "author": "Chris Voss",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0062407805-L.jpg",
+    "category": "conversation-skills",
+    "summary": "Former FBI hostage negotiator Chris Voss shares field-tested negotiation techniques that work in everyday life. His approach rejects the conventional 'getting to yes' model, arguing that humans are irrational, emotional beings. The most powerful tool is tactical empathy — understanding the feelings and mindset of the other person. Voss introduces techniques like mirroring (repeating the last 1-3 words), labeling emotions ('It seems like you're frustrated'), calibrated questions ('How am I supposed to do that?'), and the late-night FM DJ voice to create rapport and influence outcomes.",
+    "keyTakeaways": [
+      "Tactical empathy: understand the other side's perspective and feelings, then verbalize that understanding.",
+      "Mirroring: repeat the last 1-3 words of what someone said. It encourages them to elaborate and builds rapport.",
+      "Label emotions: 'It seems like...' or 'It sounds like...' Acknowledging emotions defuses them.",
+      "Aim for 'That's right' — not 'You're right.' 'That's right' means they feel truly understood.",
+      "Calibrated questions ('How' and 'What') give the illusion of control to the other side while you steer the conversation.",
+      "Use the late-night FM DJ voice for difficult moments: slow, calm, downward-inflecting."
+    ]
+  },
+  {
+    "id": "talk-like-ted",
+    "title": "Talk Like TED",
+    "author": "Carmine Gallo",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1250041120-L.jpg",
+    "category": "public-speaking",
+    "summary": "Communication coach Carmine Gallo analyzed over 500 TED talks to identify the nine secrets of the world's most compelling presentations. He groups them into three categories: emotional (unleash the master within, master the art of storytelling, have a conversation), novel (teach something new, deliver jaw-dropping moments, lighten up), and memorable (stick to the 18-minute rule, paint a mental picture with multisensory experiences, stay in your lane/be authentic). The book shows that great public speaking is a skill anyone can learn, not an innate talent.",
+    "keyTakeaways": [
+      "The 18-minute rule: constrain your presentation. Brevity forces clarity and keeps attention.",
+      "Lead with a story. Stories are up to 22x more memorable than facts alone.",
+      "The Rule of Three: people can process three pieces of information well. Structure around three key messages.",
+      "Deliver at least one jaw-dropping moment — a shocking statistic, a powerful demo, or an unexpected revelation.",
+      "Practice relentlessly, but deliver conversationally. The best speakers sound unrehearsed because they've practiced so much.",
+      "Be authentic. Passion is contagious — if you don't care deeply about your topic, neither will your audience."
+    ]
+  },
+  {
+    "id": "art-of-public-speaking",
+    "title": "The Art of Public Speaking",
+    "author": "Dale Carnegie",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1722502568-L.jpg",
+    "category": "public-speaking",
+    "summary": "Dale Carnegie's foundational text on public speaking emphasizes that confidence comes from preparation and practice, not from natural talent. The book covers the mechanics of effective speaking: how to open and close a speech, use your voice and body effectively, employ humor, handle nervousness, and connect with your audience. Carnegie's central argument is that public speaking is a skill like any other — learnable through systematic practice. Fear of speaking is natural, but it diminishes with exposure and preparation. The key is to speak about what you know and care about, and to focus on serving your audience rather than impressing them.",
+    "keyTakeaways": [
+      "Fear is natural and universal. Even experienced speakers feel nervous. Preparation and practice reduce fear.",
+      "Know your material cold. Overprepare, then speak from knowledge and conviction, not from memorized scripts.",
+      "Focus on the audience, not yourself. Shift from 'How do I look?' to 'How can I help them?'",
+      "Open with a bang: a startling statement, a question, a story — never an apology.",
+      "Use pauses deliberately. Silence is powerful and gives the audience time to absorb your message.",
+      "Practice in front of others as much as possible. Real audiences provide feedback no mirror can."
+    ]
+  },
+  {
+    "id": "subtle-art",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/0062457713-L.jpg",
+    "category": "self-improvement",
+    "summary": "Mark Manson argues that the key to a good life is not giving a f*ck about more things, but rather giving a f*ck about fewer, better things. In a world obsessed with positivity and achievement, Manson delivers a counterintuitive approach: embrace your limitations, accept that suffering is inevitable, and choose what's worth suffering for. He challenges the self-help industry's obsession with happiness, arguing that the pursuit of happiness itself causes unhappiness. Instead, focus on values: choose good values (honesty, innovation, standing up for yourself) over bad ones (popularity, material success, always being right).",
+    "keyTakeaways": [
+      "You have a limited amount of f*cks to give. Spend them wisely on things that truly matter to you.",
+      "Problems never stop; they just upgrade. Happiness comes from solving problems, not from avoiding them.",
+      "You are not special. Accepting this frees you from the pressure of exceptionalism.",
+      "Choose your values carefully. Good values are reality-based, socially constructive, and within your control.",
+      "Responsibility ≠ Fault. You didn't cause everything that happens to you, but you're responsible for how you respond.",
+      "Action isn't just the effect of motivation; it's also the cause of it. Do something, and motivation follows."
+    ]
+  },
+  {
+    "id": "deep-work",
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1455586692-L.jpg",
+    "category": "self-improvement",
+    "summary": "Cal Newport argues that the ability to perform deep work — focused, uninterrupted concentration on cognitively demanding tasks — is becoming increasingly rare and increasingly valuable. In a world of constant distraction (email, social media, open offices), those who cultivate the ability to go deep will thrive. Newport presents four rules: Work Deeply (build rituals and routines), Embrace Boredom (train your attention), Quit Social Media (apply a craftsman approach to tool selection), and Drain the Shallows (ruthlessly eliminate low-value tasks). Deep work is not just a productivity hack; it's a way to produce meaningful, high-quality work and find deep satisfaction.",
+    "keyTakeaways": [
+      "Deep work is the ability to focus without distraction on a cognitively demanding task. It's a superpower in the modern economy.",
+      "Shallow work (emails, meetings, admin) feels productive but rarely creates real value.",
+      "Schedule deep work blocks. Treat them like immovable appointments.",
+      "Embrace boredom. If you pick up your phone every time you're bored, you're training your brain to never focus.",
+      "Apply the craftsman approach to tools: adopt a tool only if it substantially benefits your core professional activities.",
+      "Have a shutdown ritual. When work is done, fully disconnect. Rest is productive."
+    ]
+  },
+  {
+    "id": "cant-hurt-me",
+    "title": "Can't Hurt Me",
+    "author": "David Goggins",
+    "coverUrl": "https://covers.openlibrary.org/b/isbn/1544512279-L.jpg",
+    "category": "self-improvement",
+    "summary": "David Goggins shares his journey from an abused, overweight, dead-end-job kid to becoming a Navy SEAL, ultra-marathon runner, and world record holder for pull-ups. His core message: most people only tap into 40% of their potential (the 40% Rule). When your mind tells you you're done, you're only 40% done. Goggins advocates for embracing suffering, taking extreme ownership of your life, and using an 'accountability mirror' to confront your weaknesses head-on. He introduces the concept of 'callusing your mind' — deliberately seeking discomfort to build mental toughness. The book is raw, intense, and refuses to sugarcoat the difficulty of transformation.",
+    "keyTakeaways": [
+      "The 40% Rule: when your mind says you're done, you're only at 40% of your potential.",
+      "Callousing the mind: seek discomfort deliberately. Each difficult experience builds mental armor.",
+      "The Accountability Mirror: face yourself honestly. Write your insecurities and goals on sticky notes on your mirror.",
+      "Taking souls: when someone doubts you, use their negativity as fuel to outperform their expectations.",
+      "The Cookie Jar: when struggling, reach into your mental cookie jar of past victories to remind yourself what you've overcome.",
+      "There are no shortcuts. Suffering is the path to growth. Embrace it."
+    ]
+  }
+]

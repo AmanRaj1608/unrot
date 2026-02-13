@@ -1,0 +1,176 @@
+[
+  {
+    "id": "sets-relations-functions",
+    "title": "Sets, Relations, and Functions",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nA set is a well-defined collection of distinct elements. Common representations are roster form and set-builder form. Operations include union, intersection, difference, and complement.\n\nRelations are subsets of A x B. On a set A, a relation can be reflexive, symmetric, and transitive; if all three hold, it is an equivalence relation that partitions A into equivalence classes.\n\nA function f: A -> B maps every input in A to exactly one output in B. Key terms: domain, codomain, range, one-one (injective), onto (surjective), bijective, inverse, and composition.\n\nProblem toolkit:\nUse Venn diagrams for set identities, cartesian products for relations, and mapping/graph checks for function validity.\n\nReal-life usage:\nSet operations power SQL queries and search filtering. Relations model database tables and social network links. Functions model pricing, sensor calibration, and machine-learning feature transforms."
+  },
+  {
+    "id": "complex-numbers",
+    "title": "Complex Numbers and Quadratic Equations",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nA complex number is z = a + bi, where i^2 = -1. Magnitude: |z| = sqrt(a^2 + b^2). Conjugate: z_bar = a - bi. Polar/exponential form: z = r(cos theta + i sin theta) = r e^(i theta).\n\nDe Moivre's theorem: (cos theta + i sin theta)^n = cos(n theta) + i sin(n theta). Roots of unity and nth roots are naturally handled in polar form.\n\nFor ax^2 + bx + c = 0, roots are (-b +/- sqrt(b^2 - 4ac)) / (2a). Discriminant controls root type. When discriminant < 0, roots are complex conjugates.\n\nProblem toolkit:\nSwitch to polar form for powers/roots; use conjugates for division; apply Vieta relations (sum = -b/a, product = c/a).\n\nReal-life usage:\nElectrical engineering uses complex numbers for AC circuits, impedance, and phasors. Signal processing and control systems use complex poles/zeros to describe oscillation, damping, and stability."
+  },
+  {
+    "id": "matrices-determinants",
+    "title": "Matrices and Determinants",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nA matrix is an ordered rectangular array. Key operations: addition, scalar multiplication, matrix multiplication, transpose, and inverse (if it exists).\n\nDeterminant indicates invertibility and geometric scaling. For square A, det(A) != 0 implies A is invertible. Properties: det(AB) = det(A)det(B), det(A^T) = det(A).\n\nRow-reduction gives rank, solves linear systems, and identifies dependence. Eigenvalues/eigenvectors capture directional scaling in linear transforms.\n\nProblem toolkit:\nUse elimination for systems, cofactors/expansion for small determinants, and adj(A)/det(A) or elimination for inverses.\n\nReal-life usage:\nComputer graphics uses matrices for rotation, scaling, projection. Search ranking and network analysis use eigenvectors (for example, PageRank-style models). Machine learning and statistics rely on matrix factorization, covariance matrices, and least-squares systems."
+  },
+  {
+    "id": "permutations-combinations",
+    "title": "Permutations and Combinations",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nCounting starts with the multiplication principle.\nPermutations (order matters): P(n,r) = n!/(n-r)!.\nCombinations (order does not matter): C(n,r) = n!/(r!(n-r)!).\n\nImportant identities: C(n,r) = C(n,n-r), Pascal identity C(n,r) + C(n,r+1) = C(n+1,r+1).\n\nAdvanced patterns include circular permutations, arrangements with repetition, and derangements.\n\nProblem toolkit:\nFirst decide if order matters. Then check constraints (repetition allowed? grouped items? circular arrangement?). Convert word statements into slot-filling or selection models.\n\nReal-life usage:\nUsed in password/keyspace estimation, tournament scheduling, genetics combinations, and reliability/safety event counting. They are also foundational for probability models like binomial and hypergeometric distributions."
+  },
+  {
+    "id": "binomial-theorem",
+    "title": "Binomial Theorem and Its Applications",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nFor integer n >= 0:\n(a + b)^n = sum_{r=0 to n} C(n,r) a^(n-r) b^r.\nGeneral term: T_(r+1) = C(n,r) a^(n-r) b^r.\n\nBinomial coefficients form Pascal's triangle and connect algebra with combinatorics. For non-integer exponents, the binomial series is used under convergence conditions (commonly |x| < 1 for (1 + x)^m).\n\nProblem toolkit:\nFind required coefficient by matching powers, use symmetry C(n,r)=C(n,n-r), and apply expansions strategically for approximation when x is small.\n\nReal-life usage:\nUsed in probability (binomial distribution), approximation in numerical methods, and uncertainty propagation. It appears in algorithm analysis, financial approximations, and polynomial modeling."
+  },
+  {
+    "id": "sequences-series",
+    "title": "Sequence and Series",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nA sequence is an ordered list; a series is its sum.\nAP: a_n = a + (n-1)d, S_n = n/2[2a + (n-1)d].\nGP: a_n = ar^(n-1), S_n = a(r^n - 1)/(r - 1) for r != 1. If |r| < 1, S_infinity = a/(1-r).\n\nUseful sums: sum k = n(n+1)/2, sum k^2 = n(n+1)(2n+1)/6, sum k^3 = [n(n+1)/2]^2.\n\nProblem toolkit:\nDetect pattern first (difference, ratio, recurrence). For mixed expressions, split into known sum components.\n\nReal-life usage:\nEMI and annuity formulas depend on geometric series. Algorithm complexity and recurrence-based runtime estimates use sequences/series. Signal decomposition and numerical approximations also rely on series behavior."
+  },
+  {
+    "id": "mathematical-induction",
+    "title": "Mathematical Induction",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nInduction proves statements for all integers from a base onward.\n1) Base case\n2) Inductive hypothesis\n3) Inductive step P(k) => P(k+1)\n\nStrong induction assumes truth for all values up to k, then proves k+1.\n\nProblem toolkit:\nUseful for divisibility, inequalities, summation identities, recursive formulas, and loop invariants. The base case is mandatory; without it, the chain has no starting anchor.\n\nReal-life usage:\nFormal verification and algorithm correctness proofs use induction extensively. Recursive data structures (trees, lists) and compiler proofs often rely on structural induction variants."
+  },
+  {
+    "id": "mathematical-reasoning",
+    "title": "Mathematical Reasoning",
+    "category": "Algebra",
+    "explanation": "Core ideas:\nReasoning uses logic, implication, equivalence, quantifiers, and proof strategies.\nKey forms: direct proof, contrapositive, contradiction, case analysis, and counterexample-based disproof.\n\nStatements are built from connectives (and, or, not, implies). Quantifiers (for all, there exists) control scope and precision.\n\nProblem toolkit:\nTranslate language carefully into logical form, test edge cases, and avoid converse/inverse fallacies.\n\nReal-life usage:\nUsed in software specifications, SAT/SMT-based verification, digital circuit design (truth tables), legal/contract logic, and scientific argument structure."
+  },
+  {
+    "id": "limits-continuity-differentiability",
+    "title": "Limits, Continuity, and Differentiability",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nA limit studies function behavior near a point. Left and right limits must agree for a two-sided limit. Continuity at x=a requires (1) f(a) exists, (2) limit as x->a exists, (3) they are equal.\n\nDifferentiability is defined by f'(a) = lim_{h->0} [f(a+h)-f(a)]/h. Differentiable => continuous, but continuous does not always imply differentiable (for example, cusp/corner points).\n\nHigh-value limits and tools:\nlim_{x->0} sin x / x = 1, lim_{x->0} (e^x-1)/x = 1, lim_{x->0} ln(1+x)/x = 1. L'Hopital's rule can handle 0/0 and inf/inf forms when conditions hold.\n\nProblem toolkit:\nUse algebraic cleanup (factorization, rationalization), trig identities, squeeze arguments, and only then derivative-based methods. Always check domain restrictions.\n\nReal-life usage:\nLimits formalize edge behavior in simulation, continuity assumptions support stable numerical solvers, and differentiability enables gradient methods used in control, optimization, and machine learning."
+  },
+  {
+    "id": "application-of-derivatives",
+    "title": "Applications of Derivatives",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nDerivative = instantaneous rate of change. Main themes: monotonicity, extrema, concavity, tangents/normals, related rates, and approximation.\n\nOptimization workflow:\n1) Define objective and constraints.\n2) Express objective in one variable if possible.\n3) Solve f'(x)=0, include boundary checks.\n4) Use sign/second-derivative tests and interpret units.\n\nUseful formulas:\nLinearization: f(x+dx) approx f(x)+f'(x)dx.\nRelative error estimate: d(ln y) approx dy/y.\nCurvature cue from second derivative and inflection checks.\n\nProblem toolkit:\nTranslate words to equations first, then differentiate. Keep track of physical constraints and feasible intervals.\n\nReal-life usage:\nUsed in engineering design optimization, economics (marginal cost/revenue/profit), operations planning, and sensitivity analysis in manufacturing and finance."
+  },
+  {
+    "id": "integrals",
+    "title": "Indefinite and Definite Integrals",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nIndefinite integral gives antiderivatives; definite integral gives net accumulation. Fundamental Theorem of Calculus: int_a^b f(x)dx = F(b)-F(a), where F' = f.\n\nCore techniques:\nsubstitution, integration by parts, partial fractions, trig identities/substitutions, and symmetry for even/odd functions. Improper integrals handle infinite limits or singularities.\n\nUseful derived quantities:\nAverage value on [a,b]: (1/(b-a))int_a^b f(x)dx.\nAccumulated change: quantity(t2)-quantity(t1) = int_{t1}^{t2} rate(t)dt.\n\nProblem toolkit:\nClassify integrand structure before choosing technique. Verify antiderivatives by differentiation when possible.\n\nReal-life usage:\nDistance from velocity, energy from power, mass from density, cumulative probability from PDFs, and total cost/revenue over time all come from definite integrals."
+  },
+  {
+    "id": "area-under-curves",
+    "title": "Area under Curves",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nSigned area under y=f(x) from a to b is int_a^b f(x)dx. Geometric area is non-negative and may need interval splitting where sign/order changes.\n\nKey formulas:\nArea between curves (x integration): A = int_a^b [f(x)-g(x)]dx (top minus bottom).\nArea between curves (y integration): A = int_c^d [x_right(y)-x_left(y)]dy.\n\nNumerical estimation:\nTrapezoidal and Simpson-style rules are used when closed forms are unavailable.\n\nProblem toolkit:\nSketch first, find intersection points, split intervals where required, and treat absolute values carefully.\n\nReal-life usage:\nPharmacokinetics uses concentration-time AUC as a primary drug exposure metric in bioequivalence studies. ROC-AUC summarizes classifier discrimination in diagnostics/ML. Hydrology and signal processing use area as total load/energy interpretation."
+  },
+  {
+    "id": "differential-equations",
+    "title": "Differential Equations",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nA differential equation links a function and its derivatives. Classification includes order, linearity, and homogeneous/non-homogeneous type.\n\nFirst-order methods:\nseparable form, linear form y' + P(x)y = Q(x) with integrating factor, and logistic growth dP/dt = rP(1-P/K).\n\nSecond-order linear form (constant coefficients) is central in oscillation and circuit models.\n\nProblem toolkit:\nIdentify equation type first, solve symbolically or numerically, then apply initial/boundary conditions. Validate units, signs, and long-time behavior (equilibrium/stability).\n\nReal-life usage:\nPopulation/epidemic dynamics, cooling/heating, RC/RL circuit response, vibration/motion models, and control systems all rely on differential equations as core modeling language."
+  },
+  {
+    "id": "calculus-modeling-optimization",
+    "title": "Calculus Modeling and Optimization (Advanced)",
+    "category": "Calculus",
+    "explanation": "Core ideas:\nPractical modeling combines derivatives, integrals, and differential equations in one loop: model -> estimate -> optimize -> validate.\n\nAdvanced tools:\nmultivariable gradients, Jacobian/Hessian interpretation, constrained optimization ideas, numerical solvers, and sensitivity/uncertainty analysis.\n\nWorkflow used in practice:\n1) Define measurable objective and constraints.\n2) Build mechanistic or data-informed model.\n3) Calibrate parameters to observed data.\n4) Optimize under safety/cost/performance limits.\n\nReal-life usage:\nFlight and orbit dynamics use systems of differential equations. Industrial process control uses calculus to maintain stability and throughput. AI training relies on gradient-based optimization over high-dimensional objective functions."
+  },
+  {
+    "id": "rectangular-coordinates",
+    "title": "Cartesian System of Rectangular Coordinates",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nThe plane uses orthogonal axes with points (x,y). Core tools: distance formula, midpoint, section formula, area of triangle by coordinates, and centroid.\n\nGeometric conditions (collinearity, perpendicularity, parallelism) can be tested algebraically using slopes or area/determinant forms.\n\nProblem toolkit:\nConvert geometry into equations early; use vector or slope form consistently.\n\nReal-life usage:\nBase framework for CAD drawings, map layouts, robotics workspace planning, and computer vision coordinate transforms."
+  },
+  {
+    "id": "straight-lines",
+    "title": "Straight Lines",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nLine forms: slope-intercept, point-slope, two-point, intercept, and general ax + by + c = 0.\n\nKey results:\nslope m = (y2-y1)/(x2-x1),\nparallel lines have equal slopes,\nperpendicular lines satisfy m1*m2 = -1 (when finite).\n\nDistance from point to line and angle between lines are standard high-frequency tools.\n\nProblem toolkit:\nChoose form based on given data (point+slope, two points, or intercepts).\n\nReal-life usage:\nUsed in linear trend modeling, road/rail alignment, camera calibration, and path planning in 2D navigation."
+  },
+  {
+    "id": "pair-of-straight-lines",
+    "title": "Pair of Straight Lines",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nA second-degree equation can represent two lines (intersecting, parallel, or coincident) under specific coefficient conditions.\n\nFor homogeneous form ax^2 + 2hxy + by^2 = 0, the pair passes through origin and line slopes m satisfy bm^2 + 2hm + a = 0.\n\nAngle between lines can be derived from slopes. Condition for perpendicular pair (through origin): a + b = 0.\n\nProblem toolkit:\nFactorize the quadratic where possible, or use discriminant/slope equations to classify the pair.\n\nReal-life usage:\nIntersection modeling for crossing beams/roads, line-detection geometry in image processing, and analytical decomposition in CAD geometry engines."
+  },
+  {
+    "id": "circles",
+    "title": "Circle",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nStandard form: (x-h)^2 + (y-k)^2 = r^2. General form identifies center and radius after completing square.\n\nImportant constructs:\ntangent, normal, chord, pole-polar, radical axis, and family of circles.\n\nProblem toolkit:\nTranslate each condition (touching, passing through, tangent from point) into algebraic equations and solve parameterically.\n\nReal-life usage:\nCoverage zones in wireless networks, geofencing on maps, robotics turning radius constraints, and circular fitting in manufacturing metrology."
+  },
+  {
+    "id": "conic-sections",
+    "title": "Conic Sections (Circle, Parabola, Ellipse, Hyperbola)",
+    "category": "Coordinate Geometry",
+    "explanation": "Core ideas:\nConics are unified by eccentricity e:\nCircle e=0, Parabola e=1, Ellipse 0<e<1, Hyperbola e>1.\n\nParabola models focus-directrix equality. Ellipse has constant sum of distances to two foci. Hyperbola has constant absolute difference of distances to two foci.\n\nProblem toolkit:\nUse standard forms, shifts/rotations, and tangent-normal formulas. Convert general quadratic by completing square and axis alignment when needed.\n\nReal-life usage:\nPlanetary and satellite orbits are elliptical in first-order models. Parabolic reflectors are used in communication/radio dishes. Hyperbolic geometry appears in time-difference localization and certain navigation/signal systems."
+  },
+  {
+    "id": "3d-geometry",
+    "title": "Coordinates and Lines in 3D Space",
+    "category": "Three-Dimensional Geometry",
+    "explanation": "Core ideas:\nA point is (x,y,z). A line is represented parametrically or in symmetric form. A plane is ax + by + cz + d = 0.\n\nKey computations:\ndistance between points, angle between lines/planes, point-to-plane distance, shortest distance between skew lines.\n\nProblem toolkit:\nUse vector form for clarity, then switch to scalar equations for solving unknown parameters.\n\nReal-life usage:\nGPS positioning and trilateration, drone/autonomous navigation, 3D game engines, and satellite imaging geolocation all depend on 3D coordinate geometry."
+  },
+  {
+    "id": "vector-algebra",
+    "title": "Vector Operations and Applications",
+    "category": "Vector Algebra",
+    "explanation": "Core ideas:\nVectors represent magnitude and direction. Core operations: addition, scalar multiplication, dot product, cross product, scalar triple product, vector triple product.\n\nDot product measures directional alignment; cross product gives perpendicular direction and area magnitude; triple product gives volume and coplanarity tests.\n\nProblem toolkit:\nResolve vectors into components, use unit vectors, project onto directions/planes, and check orthogonality via dot product = 0.\n\nReal-life usage:\nUsed in force decomposition, torque and moment calculation, graphics lighting (normals), rigid-body simulation, robotics kinematics, and navigation."
+  },
+  {
+    "id": "trigonometric-ratios-identities",
+    "title": "Trigonometric Functions, Identities, and Equations",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nTrig functions are defined on the unit circle and are periodic. Core identities include Pythagorean, angle sum/difference, double-angle, half-angle, and product-sum conversions.\n\nEquations are solved by reducing to standard forms and applying periodic general solutions.\n\nProblem toolkit:\nStandardize angle units, simplify with identities, isolate one trig function, and then apply principal value + periodicity.\n\nReal-life usage:\nWave modeling (sound/light), AC power analysis, phase synchronization, navigation bearings, and 2D/3D rotational transforms in graphics."
+  },
+  {
+    "id": "trigonometric-equations",
+    "title": "Trigonometric Equations",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nGeneral solutions:\nsin x = sin a => x = n*pi + (-1)^n a\ncos x = cos a => x = 2n*pi +/- a\ntan x = tan a => x = n*pi + a\nfor n in integers.\n\nProblem toolkit:\nTransform compound equations using identities, reduce to polynomial in one trig function where possible, then generate all solutions in the requested interval.\n\nReal-life usage:\nSignal phase matching, periodic scheduling, wave-interference conditions, and resonance analysis."
+  },
+  {
+    "id": "inverse-trigonometric-functions",
+    "title": "Inverse Trigonometric Functions",
+    "category": "Trigonometry",
+    "explanation": "Core ideas:\nInverse trig functions return principal angles over restricted ranges:\narcsin x in [-pi/2, pi/2], arccos x in [0, pi], arctan x in (-pi/2, pi/2).\n\nKey identities:\narcsin x + arccos x = pi/2,\natan x + acot x = pi/2 (principal branches).\n\nProblem toolkit:\nRespect domain/range restrictions and use triangle or substitution methods for simplification and differentiation/integration links.\n\nReal-life usage:\nAngle reconstruction from measured ratios in surveying, robotics joint-angle estimation, and signal phase retrieval from sine/cosine components."
+  },
+  {
+    "id": "statistics-probability",
+    "title": "Measures of Dispersion and Probability (Core)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nDispersion measures spread: range, variance, standard deviation, and coefficient of variation. Probability basics include events, complement, addition, multiplication, conditional probability, and independence.\n\nRandom variables summarize uncertainty with expectation and variance. For discrete X:\nE[X] = sum x p(x), Var(X)=E[X^2]-E[X]^2.\n\nProblem toolkit:\nDefine sample space/events clearly, identify whether events are independent or mutually exclusive, then apply the correct rule set.\n\nReal-life usage:\nThese tools underpin quality control, risk scoring, reliability planning, weather uncertainty communication, and insurance pricing."
+  },
+  {
+    "id": "measures-of-dispersion",
+    "title": "Measures of Dispersion (Mean, Variance, Standard Deviation)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nMean describes central location; variance and standard deviation quantify spread around center.\nPopulation variance: sigma^2 = sum (x_i-mu)^2 / N.\nSample variance: s^2 = sum (x_i-x_bar)^2 / (n-1).\nCoefficient of variation: CV = (SD/mean)*100 percent.\n\nInterpretation:\nLow spread often indicates process consistency; high spread indicates volatility/uncertainty.\n\nProblem toolkit:\nUse grouped-data formulas when needed, watch units, and normalize via CV when comparing datasets on different scales.\n\nReal-life usage:\nManufacturing capability monitoring, financial volatility tracking, exam analytics, biomarker variability studies, and anomaly detection pipelines."
+  },
+  {
+    "id": "conditional-probability-and-bayes",
+    "title": "Conditional Probability and Bayes' Theorem",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nConditional probability: P(A|B) = P(A and B)/P(B), where P(B)>0.\nBayes theorem:\nP(A_i|B) = [P(B|A_i)P(A_i)] / sum_j P(B|A_j)P(A_j).\n\nDiagnostic form (binary case):\nIf prevalence = p, sensitivity = Se, specificity = Sp,\nPPV = (Se*p) / (Se*p + (1-Sp)*(1-p)).\n\nProblem toolkit:\nWrite priors, likelihoods, and total evidence explicitly before substitution; trees/tables reduce mistakes.\n\nReal-life usage:\nMedical post-test probability, fraud/spam detection, fault diagnosis, and adaptive clinical trial decision-making are classic Bayes applications."
+  },
+  {
+    "id": "bernoulli-binomial-models",
+    "title": "Bernoulli Trials and Binomial Models",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nBernoulli trial: two outcomes with success probability p. If X counts successes in n independent trials, X ~ Binomial(n,p).\n\nPMF:\nP(X=r) = C(n,r)p^r(1-p)^(n-r), r=0..n.\nMean=np, Variance=np(1-p).\n\nApproximations:\nNormal approximation can be used for large n with suitable np and n(1-p).\nPoisson approximation can be useful when n is large and p is small.\n\nProblem toolkit:\nCheck assumptions carefully: fixed n, independent trials, constant p, binary outcome.\n\nReal-life usage:\nA/B conversion analysis, defect-count modeling, pass/fail quality checks, and reliability trial planning."
+  },
+  {
+    "id": "probability-modeling-inference",
+    "title": "Probability Modeling and Inference (Advanced)",
+    "category": "Statistics and Probability",
+    "explanation": "Core ideas:\nAdvanced probability integrates model choice, parameter estimation, uncertainty quantification, and decisions under loss.\n\nUseful themes:\nlikelihoods, posterior updates, calibration, expected utility/risk, and model diagnostics.\n\nPractical workflow:\n1) Specify data-generating assumptions.\n2) Estimate parameters and uncertainty.\n3) Validate fit and calibration.\n4) Make decision with explicit risk trade-offs.\n\nReal-life usage:\nWeather services express probability of precipitation as chance of measurable precipitation (at least 0.01 inch) at a point over a forecast period. Healthcare/regulatory contexts use Bayesian and frequentist inference for evidence-weighted decisions in trials and safety monitoring. Product teams use probabilistic experimentation to prioritize releases."
+  }
+]
